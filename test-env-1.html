@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test env 1 — The Westwood Times</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="images/twt_logo_new.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/ticker.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/env.css">
+  <style>body.env-page{background:#0d0d0d}body.env-page .env-gate{background:#0d0d0d}</style>
+</head>
+<body class="env-page">
+  <div id="top-bar"><div class="topbar-inner"><span class="topbar-date" id="topbar-date"></span><span class="topbar-tagline">Independent &middot; Accurate &middot; Essential</span><div class="topbar-links"><a href="subscribe.html">Subscribe</a><a href="newsletter.html">Newsletter</a><a href="about.html">About</a></div></div></div>
+  <header id="site-header" role="banner"><div class="header-inner">
+    <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo-link"><img src="images/twt_logo_new.png" alt="The Westwood Times" class="site-logo"></a>
+    <nav class="primary-nav" role="navigation" aria-label="Primary"><ul>
+      <li><a href="index.html#section-social" class="nav-tab">Social</a></li><li><a href="index.html#section-village" class="nav-tab">Village News</a></li>
+      <li><a href="index.html#section-sports" class="nav-tab">Sports</a></li><li><a href="index.html#section-community" class="nav-tab">Community</a></li>
+      <li><a href="index.html#section-clubs" class="nav-tab">Clubs</a></li><li><a href="index.html#section-hill" class="nav-tab">Hill</a></li>
+    </ul></nav>
+    <div class="header-actions">
+      <button class="search-btn" id="search-btn" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg></button>
+      <a href="subscribe.html" class="live-tv-btn">Subscribe</a>
+    </div>
+  </div>
+  <nav class="mobile-nav-drawer" id="mobile-nav-drawer"><ul><li><a href="index.html">Home</a></li><li><a href="index.html#section-social">Social</a></li><li><a href="index.html#section-village">Village News</a></li><li><a href="index.html#section-sports">Sports</a></li><li><a href="index.html#section-community">Community</a></li><li><a href="index.html#section-clubs">Clubs</a></li><li><a href="index.html#section-hill">Hill</a></li></ul></nav>
+  <div class="search-overlay" id="search-overlay" role="search"><form>
+    <input type="search" class="search-input" placeholder="Search The Westwood Times…" autocomplete="off">
+    <button type="button" class="search-close" id="search-close">&#x2715;</button>
+  </form><div id="search-results" class="search-results"></div></div></header>
+
+  <div class="breaking-ticker" aria-live="polite"><span class="ticker-label">this is the test</span>
+    <div class="ticker-track-wrapper"><div class="ticker-track">
+      <span class="ticker-item">test env 1</span><span class="ticker-sep">|</span>
+      <span class="ticker-item">Members Only</span><span class="ticker-sep">|</span>
+    </div></div>
+  </div>
+
+  <!-- Password Gate -->
+  <div id="env-gate">
+    <div class="env-gate-box">
+      <div class="env-gate-eyebrow">this is the test</div>
+      <h1>test env 1</h1>
+      
+      <p class="env-gate-question">Whats the number</p>
+      <input type="password" id="env-gate-pw" placeholder="Password…" autocomplete="off">
+      <div class="env-gate-error" id="env-gate-error" style="display:none">Wrong password — try again.</div>
+      <button id="env-gate-btn">Enter</button>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div id="env-content" style="display:none">
+    <div class="rh-hero">
+      <div class="rh-hero-eyebrow">this is the test</div>
+      <h1>test env 1</h1>
+      <p></p>
+    </div>
+    <div class="rh-tabs-bar" id="env-tabs"></div>
+    <div id="env-panels"></div>
+  </div>
+
+  <footer id="site-footer" role="contentinfo"><div class="footer-inner">
+    <div class="footer-logo"><a href="index.html"><img src="images/twt_logo_new.png" alt="The Westwood Times" style="height:40px;width:auto;"></a><p class="footer-tagline">Independent &middot; Accurate &middot; Essential<br>Westwood, Los Angeles &middot; Est. 2026</p></div>
+    <nav class="footer-nav" aria-label="Footer">
+      <div class="footer-col"><h4>Campus</h4><ul><li><a href="index.html#section-social">Social</a></li><li><a href="index.html#section-clubs">Clubs</a></li><li><a href="index.html#section-community">Community</a></li><li><a href="index.html#section-hill">Hill</a></li></ul></div>
+      <div class="footer-col"><h4>Westwood</h4><ul><li><a href="index.html#section-village">Village News</a></li><li><a href="index.html#section-sports">Sports</a></li><li><a href="opinion-heading">Opinion</a></li><li><a href="newsletter.html">Newsletter</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="sponsorships.html">Sponsorships</a></li><li><a href="careers.html">Careers</a></li><li><a href="about.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="legal/parody.html">Legal Notice</a></li><li><a href="legal/privacy.html">Privacy Policy</a></li><li><a href="legal/terms.html">Terms of Use</a></li><li><a href="legal/cookies.html">Cookie Settings</a></li></ul></div>
+    </nav>
+  </div><hr class="footer-divider">
+  <div class="footer-bottom"><p>&copy; 2026 The Westwood Times — All Rights Reserved.</p></div></footer>
+
+  <script src="js/ticker.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/search-data.js"></script>
+  <script src="js/search.js"></script>
+  <script>window.ENV_CONFIG = {"slug":"test-env-1","name":"test env 1","question":"Whats the number","features":["blackout","awards","chores","board","polls","scores"],"members":["M","R","C"],"description":"","eyebrow":"this is the test"};</script>
+  <script src="js/env.js"></script>
+  <script>(function(){var el=document.getElementById("topbar-date");if(el){el.textContent=new Date().toLocaleDateString("en-US",{weekday:"long",year:"numeric",month:"long",day:"numeric"});}})()</script>
+</body>
+</html>

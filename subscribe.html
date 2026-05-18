@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/twt_logo_new.png">
+  <title>Subscribe — The Westwood Times</title>
+  <meta property="og:image" content="https://www.thewestwoodtimes.com/images/twt_logo_new.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://www.thewestwoodtimes.com/images/twt_logo_new.png">  <link rel="stylesheet" href="css/reset.css?v=8">  <link rel="stylesheet" href="css/main.css?v=8">  <link rel="stylesheet" href="css/ticker.css?v=8">  <link rel="stylesheet" href="css/sidebar.css?v=8">
+  <style>
+    .sub-hero {
+      background: #111;
+      color: #fff;
+      padding: 80px 20px 72px;
+      text-align: center;
+    }
+    .sub-hero .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #cc0000;
+      margin-bottom: 18px;
+    }
+    .sub-hero h1 {
+      font-size: 46px;
+      font-weight: 900;
+      line-height: 1.1;
+      max-width: 640px;
+      margin: 0 auto 20px;
+      letter-spacing: -0.02em;
+    }
+    .sub-hero p {
+      font-size: 18px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.6);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .sub-body {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 64px 20px 80px;
+    }
+    .sub-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .sub-form input {
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      font-size: 15px;
+      padding: 13px 16px;
+      outline: none;
+      font-family: inherit;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .sub-form input:focus { border-color: #cc0000; }
+    .sub-btn {
+      background: #cc0000;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 14px 28px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background 0.15s;
+    }
+    .sub-btn:hover { background: #aa0000; }
+    .sub-status { font-size: 13px; color: #666; margin-top: 4px; min-height: 18px; }
+    .sub-perks {
+      border-top: 1px solid #e8e8e8;
+      padding-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .sub-perk h4 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 4px;
+    }
+    .sub-perk p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .sub-note {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 24px;
+      line-height: 1.5;
+    }
+    @media (max-width: 500px) {
+      .sub-hero h1 { font-size: 30px; }
+      .sub-perks { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="top-bar"><div class="topbar-inner"><span class="topbar-date" id="topbar-date"></span><span class="topbar-tagline">Independent &middot; Accurate &middot; Essential</span><div class="topbar-links"><a href="subscribe.html">Subscribe</a><a href="newsletter.html">Newsletter</a><a href="about.html">About</a></div></div></div>
+
+  <header id="site-header" role="banner">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="index.html" class="logo-link" aria-label="The Westwood Times home">
+        <img src="images/twt_logo_new.png" alt="The Westwood Times" class="site-logo">
+      </a>
+      <nav class="primary-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#section-social" class="nav-tab">Social</a></li>
+          <li><a href="index.html#section-village" class="nav-tab">Village News</a></li>
+          <li><a href="index.html#section-sports" class="nav-tab">Sports</a></li>
+          <li><a href="index.html#section-community" class="nav-tab">Community</a></li>
+          <li><a href="index.html#section-clubs" class="nav-tab">Clubs</a></li>
+          <li><a href="index.html#section-hill" class="nav-tab">Hill</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="search-btn" id="search-btn" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg></button>
+        <a href="subscribe.html" class="live-tv-btn">Subscribe</a>
+      </div>
+    </div>
+    <nav class="mobile-nav-drawer" id="mobile-nav-drawer"><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#section-social">Social</a></li>
+      <li><a href="index.html#section-village">Village News</a></li>
+      <li><a href="index.html#section-sports">Sports</a></li>
+      <li><a href="index.html#section-community">Community</a></li>
+      <li><a href="index.html#section-clubs">Clubs</a></li>
+      <li><a href="index.html#section-hill">Hill</a></li>
+    </ul></nav>
+    <div class="search-overlay" id="search-overlay" role="search" aria-hidden="true"><form>
+      <input type="search" class="search-input" placeholder="Search The Westwood Times…" autocomplete="off" aria-label="Search">
+      <button type="button" class="search-close" id="search-close" aria-label="Close search">&#x2715;</button>
+    </form><div id="search-results" class="search-results"></div></div>
+  </header>
+
+  <div class="sub-hero">
+    <p class="eyebrow">Subscribe</p>
+    <h1>Stay ahead of every story</h1>
+    <p>Get The Westwood Times delivered to your inbox — breaking news, in-depth coverage, and the stories Westwood is talking about.</p>
+  </div>
+
+  <div class="sub-body">
+    <form class="sub-form" id="sub-form" autocomplete="off">
+      <input type="text" id="sub-name" placeholder="Full name" required>
+      <input type="email" id="sub-email" placeholder="Email address" required>
+      <button type="submit" class="sub-btn">Subscribe — It's Free</button>
+    </form>
+    <p class="sub-status" id="sub-status"></p>
+
+    <div class="sub-perks">
+      <div class="sub-perk">
+        <h4>Breaking News Alerts</h4>
+        <p>Get notified the moment major stories break on campus and in Westwood.</p>
+      </div>
+      <div class="sub-perk">
+        <h4>Weekly Digest</h4>
+        <p>A curated roundup of the week's most important stories, every Sunday morning.</p>
+      </div>
+      <div class="sub-perk">
+        <h4>Sports Coverage</h4>
+        <p>Game recaps, analysis, and recruiting news for every UCLA varsity sport.</p>
+      </div>
+      <div class="sub-perk">
+        <h4>Campus Pulse</h4>
+        <p>Student government, housing, dining, and campus life — all in one place.</p>
+      </div>
+    </div>
+
+    <p class="sub-note">By subscribing you agree to our <a href="legal/privacy.html" style="color:#cc0000">Privacy Policy</a> and <a href="legal/terms.html" style="color:#cc0000">Terms of Use</a>. Unsubscribe any time.</p>
+  </div>
+
+  <footer id="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <a href="index.html" aria-label="The Westwood Times home"><img src="images/twt_logo_new.png" alt="The Westwood Times"></a>      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col"><h4>Campus</h4><ul>
+          <li><a href="index.html#section-social">Social</a></li>
+          <li><a href="index.html#section-clubs">Clubs</a></li>
+          <li><a href="index.html#section-community">Community</a></li>
+          <li><a href="index.html#section-hill">Hill</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Westwood</h4><ul>
+          <li><a href="index.html#section-village">Village News</a></li>
+          <li><a href="index.html#section-sports">Sports</a></li>
+          <li><a href="index.html#opinion-heading">Opinion</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="sponsorships.html">Sponsorships</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="newsletter.html">Newsletters</a></li>
+          <li><a href="sponsorships.html">Advertise</a></li>
+          <li><a href="about.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul>
+          <li><a href="legal/parody.html">Legal Notice</a></li>
+          <li><a href="legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="legal/terms.html">Terms of Use</a></li>
+          <li><a href="legal/cookies.html">Cookie Settings</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom"><p>&copy; 2026 The Westwood Times — All Rights Reserved.</p></div>
+  </footer>
+
+  <script src="js/ticker.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/search-data.js"></script>
+  <script src="js/search.js"></script>
+  <script>
+    (function(){
+      var el = document.getElementById('topbar-date');
+      if(el){ el.textContent = new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}); }
+      document.getElementById('sub-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name  = document.getElementById('sub-name').value.trim();
+        var email = document.getElementById('sub-email').value.trim();
+        var status = document.getElementById('sub-status');
+        if (!name || !email) return;
+        status.textContent = 'Subscribed! Welcome, ' + name.split(' ')[0] + '. Check your inbox for a confirmation email.';
+        status.style.color = '#2a7a2a';
+        document.getElementById('sub-form').reset();
+      });
+    })();
+  </script>
+</body>
+</html>

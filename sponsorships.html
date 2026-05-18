@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/twt_logo_new.png">
+  <title>Sponsorships & Partnerships — The Westwood Times</title>
+  <meta property="og:image" content="https://www.thewestwoodtimes.com/images/twt_logo_new.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://www.thewestwoodtimes.com/images/twt_logo_new.png">  <link rel="stylesheet" href="css/reset.css?v=8">  <link rel="stylesheet" href="css/main.css?v=8">  <link rel="stylesheet" href="css/ticker.css?v=8">  <link rel="stylesheet" href="css/sidebar.css?v=8">
+  <style>
+    .spons-hero {
+      background: var(--color-primary-dark);
+      border-bottom: 3px solid var(--color-accent);
+      padding: 72px 20px 64px;
+      text-align: center;
+    }
+    .spons-hero-eyebrow {
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 16px;
+    }
+    .spons-hero h1 {
+      font-size: 40px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      max-width: 680px;
+      margin: 0 auto 18px;
+    }
+    .spons-hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.65;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .spons-body {
+      background: var(--color-body-bg);
+      padding: 64px 20px;
+    }
+    .spons-inner {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .spons-section-label {
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-primary-dark);
+      border-left: 3px solid var(--color-accent);
+      padding-left: 10px;
+      margin-bottom: 36px;
+    }
+
+    .spons-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 72px;
+    }
+
+    .spons-card {
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .spons-card-header {
+      background: var(--color-primary-dark);
+      padding: 28px 28px 24px;
+      border-bottom: 3px solid var(--color-accent);
+    }
+    .spons-card-header.gold {
+      background: var(--color-accent);
+    }
+    .spons-card-header.gold .spons-card-type,
+    .spons-card-header.gold .spons-card-title,
+    .spons-card-header.gold .spons-card-price {
+      color: var(--color-primary-dark);
+    }
+
+    .spons-card-type {
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+    .spons-card-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .spons-card-price {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 500;
+    }
+
+    .spons-card-body {
+      padding: 28px;
+      flex: 1;
+      background: #fff;
+    }
+    .spons-card-body p {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .spons-feature-list {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+    .spons-feature-list li {
+      font-size: 13px;
+      color: var(--color-text);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--color-border-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .spons-feature-list li::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      flex-shrink: 0;
+    }
+    .spons-cta {
+      display: inline-block;
+      background: var(--color-primary-dark);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 3px;
+      transition: background 0.15s;
+    }
+    .spons-cta:hover { background: var(--color-primary); }
+    .spons-cta.gold-cta {
+      background: var(--color-accent);
+      color: var(--color-primary-dark);
+    }
+    .spons-cta.gold-cta:hover { background: var(--color-accent-dark); }
+
+    .spons-contact {
+      background: var(--color-section-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 44px 48px;
+      text-align: center;
+    }
+    .spons-contact h2 {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--color-primary-dark);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .spons-contact p {
+      font-size: 15px;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto 28px;
+    }
+    .spons-email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-primary-dark);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 13px 30px;
+      border-radius: 3px;
+      transition: background 0.15s;
+      letter-spacing: 0.02em;
+    }
+    .spons-email-btn:hover { background: var(--color-primary); }
+    .spons-email-btn svg { flex-shrink: 0; }
+    .spons-note {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      margin-top: 16px;
+    }
+
+    @media (max-width: 860px) {
+      .spons-grid { grid-template-columns: 1fr; }
+      .spons-contact { padding: 32px 24px; }
+      .spons-hero h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="top-bar"><div class="topbar-inner"><span class="topbar-date" id="topbar-date"></span><span class="topbar-tagline">Independent &middot; Accurate &middot; Essential</span><div class="topbar-links"><a href="subscribe.html">Subscribe</a><a href="newsletter.html">Newsletter</a><a href="about.html">About</a></div></div></div>
+
+  <header id="site-header" role="banner">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="index.html" class="logo-link" aria-label="The Westwood Times home">
+        <img src="images/twt_logo_new.png" alt="The Westwood Times" class="site-logo">
+      </a>
+      <nav class="primary-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#section-social" class="nav-tab">Social</a></li>
+          <li><a href="index.html#section-village" class="nav-tab">Village News</a></li>
+          <li><a href="index.html#section-sports" class="nav-tab">Sports</a></li>
+          <li><a href="index.html#section-community" class="nav-tab">Community</a></li>
+          <li><a href="index.html#section-clubs" class="nav-tab">Clubs</a></li>
+          <li><a href="index.html#section-hill" class="nav-tab">Hill</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="search-btn" id="search-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+        </button>
+        <a href="subscribe.html" class="live-tv-btn">Subscribe</a>
+      </div>
+    </div>
+    <nav class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#section-social">Social</a></li>
+        <li><a href="index.html#section-village">Village News</a></li>
+        <li><a href="index.html#section-sports">Sports</a></li>
+        <li><a href="index.html#section-community">Community</a></li>
+        <li><a href="index.html#section-clubs">Clubs</a></li>
+        <li><a href="index.html#section-hill">Hill</a></li>
+      </ul>
+    </nav>
+    <div class="search-overlay" id="search-overlay" role="search" aria-hidden="true">
+      <form>
+        <input type="search" class="search-input" placeholder="Search The Westwood Times…" autocomplete="off" aria-label="Search">
+        <button type="button" class="search-close" id="search-close" aria-label="Close search">&#x2715;</button>
+      </form>
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="spons-hero">
+    <p class="spons-hero-eyebrow">Partner With Us</p>
+    <h1>Reach a Highly Engaged, Informed Audience</h1>
+    <p>The Westwood Times connects you with readers who are curious, educated, and influential. Transparent pricing, three tiers — starting at $5/week.</p>
+  </div>
+
+  <!-- Main body -->
+  <div class="spons-body">
+    <div class="spons-inner">
+
+      <p class="spons-section-label">Partnership Options</p>
+
+      <div class="spons-grid">
+
+        <!-- Card 1: Article Publishing -->
+        <div class="spons-card">
+          <div class="spons-card-header">
+            <div class="spons-card-type">Content</div>
+            <div class="spons-card-title">Article Publishing</div>
+            <div class="spons-card-price" style="font-size:22px;font-weight:900;color:#fff;margin-top:4px">$5<span style="font-size:13px;font-weight:400;opacity:0.6"> / week</span></div>
+          </div>
+          <div class="spons-card-body">
+            <p>Publish a sponsored article on the TWT homepage under your byline, with a permanent URL and full distribution across our category pages.</p>
+            <ul class="spons-feature-list">
+              <li>Published on TWT homepage</li>
+              <li>Your byline &amp; voice</li>
+              <li>Permanent URL on thewestwoodtimes.com</li>
+              <li>Included in site search index</li>
+              <li>Labeled "Sponsored Content"</li>
+            </ul>
+            <a href="mailto:thewestwoodtimes@gmail.com?subject=Article Publishing Inquiry" class="spons-cta">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Display Advertising -->
+        <div class="spons-card">
+          <div class="spons-card-header gold">
+            <div class="spons-card-type">Advertising</div>
+            <div class="spons-card-title">Display Advertising</div>
+            <div class="spons-card-price" style="font-size:22px;font-weight:900;color:#111;margin-top:4px">$20<span style="font-size:13px;font-weight:400;opacity:0.6"> / week</span></div>
+          </div>
+          <div class="spons-card-body">
+            <p>Place your banner in front of every visitor on the homepage, article pages, or both. High-visibility placements that match our editorial design.</p>
+            <ul class="spons-feature-list">
+              <li>Homepage banner (1200 &times; 200 px)</li>
+              <li>Article page mid-content placement</li>
+              <li>All-pages or targeted placement</li>
+              <li>Link directly to your site</li>
+              <li>Live within 24 hours of approval</li>
+            </ul>
+            <a href="mailto:thewestwoodtimes@gmail.com?subject=Display Advertising Inquiry" class="spons-cta gold-cta">Advertise Now</a>
+          </div>
+        </div>
+
+        <!-- Card 3: The Press Room -->
+        <div class="spons-card">
+          <div class="spons-card-header">
+            <div class="spons-card-type">Contributor Access</div>
+            <div class="spons-card-title">The Press Room</div>
+            <div class="spons-card-price" style="font-size:22px;font-weight:900;color:#fff;margin-top:4px">$20<span style="font-size:13px;font-weight:400;opacity:0.6"> one-time</span></div>
+          </div>
+          <div class="spons-card-body">
+            <p>Your own private publishing environment. A dedicated contributor password so you can publish articles to TWT anytime — on your schedule, with your byline.</p>
+            <ul class="spons-feature-list">
+              <li>Dedicated contributor login</li>
+              <li>Unlimited article submissions</li>
+              <li>Publish across all categories</li>
+              <li>Your byline on every piece</li>
+              <li>Editorial review available</li>
+            </ul>
+            <a href="mailto:thewestwoodtimes@gmail.com?subject=Press Room Access Inquiry" class="spons-cta">Get Access</a>
+          </div>
+        </div>
+
+      </div><!-- /.spons-grid -->
+
+      <!-- Contact CTA -->
+      <div class="spons-contact">
+        <h2>Ready to Partner?</h2>
+        <p>Questions about a package, or looking for a longer-term arrangement? Reach out and we'll respond within one business day.</p>
+        <a href="mailto:thewestwoodtimes@gmail.com" class="spons-email-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          thewestwoodtimes@gmail.com
+        </a>
+        <p class="spons-note">We typically respond within one business day.</p>
+      </div>
+
+    </div><!-- /.spons-inner -->
+  </div><!-- /.spons-body -->
+
+  <footer id="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <a href="index.html" aria-label="The Westwood Times home"><img src="images/twt_logo_new.png" alt="The Westwood Times"></a>      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col"><h4>Campus</h4><ul>
+          <li><a href="index.html#section-social">Social</a></li>
+          <li><a href="index.html#section-clubs">Clubs</a></li>
+          <li><a href="index.html#section-community">Community</a></li>
+          <li><a href="index.html#section-hill">Hill</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Westwood</h4><ul>
+          <li><a href="index.html#section-village">Village News</a></li>
+          <li><a href="index.html#section-sports">Sports</a></li>
+          <li><a href="index.html#opinion-heading">Opinion</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="sponsorships.html">Sponsorships</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="newsletter.html">Newsletters</a></li>
+          <li><a href="sponsorships.html">Advertise</a></li>
+          <li><a href="about.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul>
+          <li><a href="legal/parody.html">Legal Notice</a></li>
+          <li><a href="legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="legal/terms.html">Terms of Use</a></li>
+          <li><a href="legal/cookies.html">Cookie Settings</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom"><p>&copy; 2026 The Westwood Times — All Rights Reserved.</p></div>
+  </footer>
+
+  <script src="js/ticker.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/search-data.js"></script>
+  <script src="js/search.js"></script>
+  <script>(function(){var el=document.getElementById("topbar-date");if(el){el.textContent=new Date().toLocaleDateString("en-US",{weekday:"long",year:"numeric",month:"long",day:"numeric"});}})()</script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/twt_logo_new.png">
+  <title>Newsletters — The Westwood Times</title>
+  <meta property="og:image" content="https://www.thewestwoodtimes.com/images/twt_logo_new.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://www.thewestwoodtimes.com/images/twt_logo_new.png">  <link rel="stylesheet" href="css/reset.css?v=8">  <link rel="stylesheet" href="css/main.css?v=8">  <link rel="stylesheet" href="css/ticker.css?v=8">  <link rel="stylesheet" href="css/sidebar.css?v=8">
+  <style>
+    .nl-hero {
+      background: #111;
+      color: #fff;
+      padding: 72px 20px 64px;
+      text-align: center;
+    }
+    .nl-hero .eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #cc0000; margin-bottom: 16px;
+    }
+    .nl-hero h1 {
+      font-size: 44px; font-weight: 900; line-height: 1.1;
+      max-width: 640px; margin: 0 auto 18px; letter-spacing: -0.02em;
+    }
+    .nl-hero p {
+      font-size: 17px; line-height: 1.65; color: rgba(255,255,255,0.6);
+      max-width: 500px; margin: 0 auto;
+    }
+    .nl-body { max-width: 860px; margin: 0 auto; padding: 64px 20px 80px; }
+    .nl-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin-bottom: 56px;
+    }
+    .nl-card {
+      border: 1px solid #e8e8e8; border-radius: 4px; overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .nl-card-header {
+      background: #111; padding: 22px 22px 18px;
+      border-bottom: 3px solid #cc0000;
+    }
+    .nl-card-freq {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #cc0000; margin-bottom: 6px;
+    }
+    .nl-card-name {
+      font-size: 18px; font-weight: 900; color: #fff; line-height: 1.2;
+    }
+    .nl-card-body { padding: 22px; flex: 1; background: #fff; }
+    .nl-card-body p { font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 18px; }
+    .nl-card-form { display: flex; gap: 8px; flex-wrap: wrap; }
+    .nl-card-form input {
+      flex: 1; min-width: 0; border: 1px solid #ddd; border-radius: 3px;
+      font-size: 13px; padding: 9px 12px; outline: none; font-family: inherit;
+    }
+    .nl-card-form input:focus { border-color: #cc0000; }
+    .nl-card-btn {
+      background: #cc0000; border: none; border-radius: 3px; color: #fff;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
+      padding: 9px 16px; cursor: pointer; text-transform: uppercase;
+      white-space: nowrap; transition: background 0.15s;
+    }
+    .nl-card-btn:hover { background: #aa0000; }
+    .nl-card-status { font-size: 12px; color: #2a7a2a; margin-top: 8px; min-height: 16px; }
+
+    .nl-archive { border-top: 1px solid #e8e8e8; padding-top: 48px; }
+    .nl-archive h2 {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #cc0000; margin-bottom: 24px;
+    }
+    .nl-edition {
+      display: flex; align-items: flex-start; gap: 20px;
+      padding: 18px 0; border-bottom: 1px solid #f0f0f0;
+    }
+    .nl-edition-date {
+      font-size: 12px; color: #aaa; font-weight: 600; white-space: nowrap;
+      min-width: 80px; padding-top: 2px;
+    }
+    .nl-edition-content h4 {
+      font-size: 16px; font-weight: 800; color: #111; margin-bottom: 4px; line-height: 1.3;
+    }
+    .nl-edition-content p {
+      font-size: 13px; color: #666; line-height: 1.5; margin: 0;
+    }
+    @media (max-width: 720px) {
+      .nl-grid { grid-template-columns: 1fr; }
+      .nl-hero h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="top-bar"><div class="topbar-inner"><span class="topbar-date" id="topbar-date"></span><span class="topbar-tagline">Independent &middot; Accurate &middot; Essential</span><div class="topbar-links"><a href="subscribe.html">Subscribe</a><a href="newsletter.html">Newsletter</a><a href="about.html">About</a></div></div></div>
+
+  <header id="site-header" role="banner">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="index.html" class="logo-link" aria-label="The Westwood Times home">
+        <img src="images/twt_logo_new.png" alt="The Westwood Times" class="site-logo">
+      </a>
+      <nav class="primary-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#section-social" class="nav-tab">Social</a></li>
+          <li><a href="index.html#section-village" class="nav-tab">Village News</a></li>
+          <li><a href="index.html#section-sports" class="nav-tab">Sports</a></li>
+          <li><a href="index.html#section-community" class="nav-tab">Community</a></li>
+          <li><a href="index.html#section-clubs" class="nav-tab">Clubs</a></li>
+          <li><a href="index.html#section-hill" class="nav-tab">Hill</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="search-btn" id="search-btn" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg></button>
+        <a href="subscribe.html" class="live-tv-btn">Subscribe</a>
+      </div>
+    </div>
+    <nav class="mobile-nav-drawer" id="mobile-nav-drawer"><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#section-social">Social</a></li>
+      <li><a href="index.html#section-village">Village News</a></li>
+      <li><a href="index.html#section-sports">Sports</a></li>
+      <li><a href="index.html#section-community">Community</a></li>
+      <li><a href="index.html#section-clubs">Clubs</a></li>
+      <li><a href="index.html#section-hill">Hill</a></li>
+    </ul></nav>
+    <div class="search-overlay" id="search-overlay" role="search" aria-hidden="true"><form>
+      <input type="search" class="search-input" placeholder="Search The Westwood Times…" autocomplete="off" aria-label="Search">
+      <button type="button" class="search-close" id="search-close" aria-label="Close search">&#x2715;</button>
+    </form><div id="search-results" class="search-results"></div></div>
+  </header>
+
+  <div class="nl-hero">
+    <p class="eyebrow">Newsletters</p>
+    <h1>The Westwood Times in your inbox</h1>
+    <p>Pick the newsletters that matter to you. Free, focused, and delivered on a schedule you can count on.</p>
+  </div>
+
+  <div class="nl-body">
+
+    <div class="nl-grid">
+
+      <div class="nl-card">
+        <div class="nl-card-header">
+          <p class="nl-card-freq">Daily &middot; Mon–Fri</p>
+          <h3 class="nl-card-name">The Morning Brief</h3>
+        </div>
+        <div class="nl-card-body">
+          <p>Everything you need to know before you leave for class. Top stories, today's agenda, and one thing to watch.</p>
+          <div class="nl-card-form">
+            <input type="email" placeholder="your@email.com" class="nl-email">
+            <button class="nl-card-btn nl-sub-btn">Sign Up</button>
+          </div>
+          <p class="nl-card-status"></p>
+        </div>
+      </div>
+
+      <div class="nl-card">
+        <div class="nl-card-header" style="border-bottom-color:#2774AE">
+          <p class="nl-card-freq" style="color:#2774AE">Weekly &middot; Sunday</p>
+          <h3 class="nl-card-name">Campus Pulse</h3>
+        </div>
+        <div class="nl-card-body">
+          <p>Student government, housing updates, USAC votes, and the issues shaping life on the Hill — once a week, every Sunday.</p>
+          <div class="nl-card-form">
+            <input type="email" placeholder="your@email.com" class="nl-email">
+            <button class="nl-card-btn nl-sub-btn" style="background:#2774AE">Sign Up</button>
+          </div>
+          <p class="nl-card-status"></p>
+        </div>
+      </div>
+
+      <div class="nl-card">
+        <div class="nl-card-header" style="border-bottom-color:#1e6e3a">
+          <p class="nl-card-freq" style="color:#1e6e3a">Weekly &middot; Friday</p>
+          <h3 class="nl-card-name">Weekend Playbook</h3>
+        </div>
+        <div class="nl-card-body">
+          <p>What's on in Westwood this weekend. Events, sports, restaurant openings, and the social scene — curated every Friday afternoon.</p>
+          <div class="nl-card-form">
+            <input type="email" placeholder="your@email.com" class="nl-email">
+            <button class="nl-card-btn nl-sub-btn" style="background:#1e6e3a">Sign Up</button>
+          </div>
+          <p class="nl-card-status"></p>
+        </div>
+      </div>
+
+    </div><!-- /.nl-grid -->
+
+    <div class="nl-archive">
+      <h2>Recent Editions</h2>
+
+      <div class="nl-edition">
+        <span class="nl-edition-date">Apr 4, 2026</span>
+        <div class="nl-edition-content">
+          <h4>The Morning Brief — UCLA reaches the national championship; USAC fee vote delayed</h4>
+          <p>Lauren Betts' double-double carries Bruins past Texas; Bruin Success Referendum under Elections Board review.</p>
+        </div>
+      </div>
+      <div class="nl-edition">
+        <span class="nl-edition-date">Apr 3, 2026</span>
+        <div class="nl-edition-content">
+          <h4>Campus Pulse — Housing triple-room policy, DEI staffing cuts, and the $425M deficit</h4>
+          <p>A look at the three interconnected pressures reshaping student life at UCLA this spring quarter.</p>
+        </div>
+      </div>
+      <div class="nl-edition">
+        <span class="nl-edition-date">Apr 3, 2026</span>
+        <div class="nl-edition-content">
+          <h4>Weekend Playbook — Final Four watch parties, Westwood Village Theatre news, and Bread Head opening</h4>
+          <p>Where to catch the game, what's new on Westwood Blvd, and the best ways to decompress after midterms.</p>
+        </div>
+      </div>
+      <div class="nl-edition">
+        <span class="nl-edition-date">Mar 28, 2026</span>
+        <div class="nl-edition-content">
+          <h4>The Morning Brief — Jordan Chiles perfect 10; UC worker contract ratified</h4>
+          <p>UCLA gymnastics sends the crowd home buzzing; TAs and hourly workers secure up to 62% wage gains.</p>
+        </div>
+      </div>
+
+    </div><!-- /.nl-archive -->
+
+  </div><!-- /.nl-body -->
+
+  <footer id="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <a href="index.html" aria-label="The Westwood Times home"><img src="images/twt_logo_new.png" alt="The Westwood Times"></a>      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col"><h4>Campus</h4><ul>
+          <li><a href="index.html#section-social">Social</a></li>
+          <li><a href="index.html#section-clubs">Clubs</a></li>
+          <li><a href="index.html#section-community">Community</a></li>
+          <li><a href="index.html#section-hill">Hill</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Westwood</h4><ul>
+          <li><a href="index.html#section-village">Village News</a></li>
+          <li><a href="index.html#section-sports">Sports</a></li>
+          <li><a href="index.html#opinion-heading">Opinion</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="sponsorships.html">Sponsorships</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="newsletter.html">Newsletters</a></li>
+          <li><a href="sponsorships.html">Advertise</a></li>
+          <li><a href="about.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul>
+          <li><a href="legal/parody.html">Legal Notice</a></li>
+          <li><a href="legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="legal/terms.html">Terms of Use</a></li>
+          <li><a href="legal/cookies.html">Cookie Settings</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom"><p>&copy; 2026 The Westwood Times — All Rights Reserved.</p></div>
+  </footer>
+
+  <script src="js/ticker.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/search-data.js"></script>
+  <script src="js/search.js"></script>
+  <script>
+    (function(){
+      var el = document.getElementById('topbar-date');
+      if(el){ el.textContent = new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}); }
+      document.querySelectorAll('.nl-sub-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var card   = btn.closest('.nl-card-body');
+          var input  = card.querySelector('.nl-email');
+          var status = card.querySelector('.nl-card-status');
+          if (!input.value.trim()) { input.focus(); return; }
+          status.textContent = 'You\'re subscribed!';
+          input.value = '';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

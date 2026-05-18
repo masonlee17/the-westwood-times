@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/twt_logo_new.png">
+  <title>About The Westwood Times — Our Mission, Values &amp; People</title>
+  <meta name="description" content="Learn about The Westwood Times — an independent student news outlet covering UCLA and Westwood with accuracy, fairness, and community focus.">
+  <link rel="canonical" href="https://www.thewestwoodtimes.com/about.html">
+  <meta property="og:title" content="About The Westwood Times">
+  <meta property="og:description" content="Learn about The Westwood Times — an independent student news outlet covering UCLA and Westwood with accuracy, fairness, and community focus.">
+  <meta property="og:url" content="https://www.thewestwoodtimes.com/about.html">
+  <meta property="og:image" content="https://www.thewestwoodtimes.com/images/twt_logo_new.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://www.thewestwoodtimes.com/images/twt_logo_new.png">  <link rel="stylesheet" href="css/reset.css?v=8">  <link rel="stylesheet" href="css/main.css?v=8">  <link rel="stylesheet" href="css/ticker.css?v=8">  <link rel="stylesheet" href="css/grid.css?v=9">  <link rel="stylesheet" href="css/sidebar.css?v=8">
+  <style>
+    /* ── About page layout ── */
+    .about-hero {
+      background: #111;
+      color: #fff;
+      padding: 72px 20px 64px;
+      text-align: center;
+    }
+    .about-hero .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #2774AE;
+      margin-bottom: 16px;
+    }
+    .about-hero h1 {
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1.1;
+      max-width: 720px;
+      margin: 0 auto 20px;
+    }
+    .about-hero p {
+      font-size: 18px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.65);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .about-section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 20px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .about-section:last-of-type { border-bottom: none; }
+    .about-section h2 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #2774AE;
+      margin-bottom: 14px;
+    }
+    .about-section h3 {
+      font-size: 28px;
+      font-weight: 900;
+      color: #111;
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+    .about-section p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #444;
+      margin-bottom: 14px;
+    }
+    .about-section p:last-child { margin-bottom: 0; }
+
+    /* Values grid */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 32px;
+    }
+    .value-card {
+      border-left: 3px solid #2774AE;
+      padding-left: 16px;
+    }
+    .value-card h4 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 6px;
+    }
+    .value-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #666;
+      margin: 0;
+    }
+
+    /* Leadership grid */
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .leader-card img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      filter: grayscale(20%);
+    }
+    .leader-card h4 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 2px;
+    }
+    .leader-card p {
+      font-size: 12px;
+      color: #888;
+      margin: 0;
+    }
+
+    /* Stats strip */
+    .stats-strip {
+      background: #f5f5f5;
+      padding: 40px 20px;
+    }
+    .stats-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      gap: 20px;
+    }
+    .stat-item strong {
+      display: block;
+      font-size: 36px;
+      font-weight: 900;
+      color: #2774AE;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-item span {
+      font-size: 13px;
+      color: #666;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Contact section */
+    .contact-section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    .contact-section h2 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #2774AE;
+      margin-bottom: 14px;
+    }
+    .contact-section h3 {
+      font-size: 22px;
+      font-weight: 900;
+      color: #111;
+      margin-bottom: 10px;
+    }
+    .contact-section p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 28px;
+    }
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .contact-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 20px;
+    }
+    .contact-card h4 {
+      font-size: 14px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 4px;
+    }
+    .contact-card p {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .contact-card a {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2774AE;
+      text-decoration: none;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+
+    /* ── Admin panel (hidden until unlocked) ── */
+    #admin {
+      display: none;
+      background: #f9f9f9;
+      border-top: 3px solid #2774AE;
+      padding: 48px 20px 80px;
+    }
+    #admin-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    #admin h2 {
+      font-size: 22px;
+      font-weight: 900;
+      color: #111;
+      margin-bottom: 4px;
+    }
+    #admin .subtitle {
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    #admin h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 14px;
+    }
+    .create-form {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 24px;
+      margin-bottom: 36px;
+    }
+    .form-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .form-row label {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #555;
+      flex: 1;
+      min-width: 0;
+    }
+    .form-row label.narrow { flex: 0 0 160px; min-width: 120px; }
+    @media (max-width: 520px) {
+      .form-row label, .form-row label.narrow { flex: 1 1 100%; }
+      .create-form { padding: 16px; }
+    }
+    .form-row input, .form-row select {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 14px;
+      padding: 9px 12px;
+      outline: none;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+    .form-row input:focus, .form-row select:focus { border-color: #2774AE; }
+    .form-row textarea {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 14px;
+      padding: 9px 12px;
+      outline: none;
+      background: #fff;
+      resize: vertical;
+      min-height: 80px;
+      font-family: inherit;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+    .form-row textarea:focus { border-color: #2774AE; }
+    .form-row.full label { width: 100%; flex: none; }
+    .btn-create {
+      background: #2774AE;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 10px 22px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    .btn-create:hover { background: #1a5f8a; }
+    .article-list { display: flex; flex-direction: column; gap: 12px; }
+    .article-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      background: #fff;
+    }
+    .article-item-info { flex: 1; }
+    .article-item-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #fff;
+      padding: 2px 7px;
+      border-radius: 2px;
+      margin-bottom: 5px;
+    }
+    .article-item-headline { font-size: 14px; font-weight: 700; color: #111; line-height: 1.4; margin-bottom: 3px; }
+    .article-item-dek { font-size: 12px; color: #666; line-height: 1.5; }
+    .article-item-meta { font-size: 11px; color: #aaa; margin-top: 4px; }
+    .article-item-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .btn-delete {
+      background: none;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      color: #999;
+      font-size: 11px;
+      cursor: pointer;
+      padding: 4px 10px;
+      flex-shrink: 0;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-delete:hover { border-color: #cc3333; color: #cc3333; }
+    .btn-edit {
+      background: none;
+      border: 1px solid #2774AE;
+      border-radius: 3px;
+      color: #2774AE;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 4px 10px;
+      flex-shrink: 0;
+      transition: background 0.15s, color 0.15s;
+    }
+    .btn-edit:hover { background: #2774AE; color: #fff; }
+    .btn-feature {
+      background: none;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      color: #bbb;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 4px 10px;
+      flex-shrink: 0;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+      letter-spacing: 0.02em;
+    }
+    .btn-feature:hover { border-color: #C8A800; color: #C8A800; }
+    .btn-feature-active {
+      background: #FFD100;
+      border-color: #FFD100;
+      color: #333;
+    }
+    .btn-feature-active:hover { background: #C8A800; border-color: #C8A800; color: #222; }
+
+    /* ── Edit modal ── */
+    #edit-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 9999;
+      overflow-y: auto;
+      padding: 24px 16px;
+    }
+    .edit-modal-box {
+      background: #fff;
+      max-width: 680px;
+      margin: 0 auto;
+      border-radius: 6px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      overflow: hidden;
+    }
+    .edit-modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid #e8e8e8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .edit-modal-header h3 { font-size: 15px; font-weight: 900; color: #111; margin: 0; }
+    .edit-modal-close { background: none; border: none; font-size: 22px; color: #aaa; cursor: pointer; line-height: 1; padding: 0; }
+    .edit-modal-close:hover { color: #111; }
+    .edit-modal-body { padding: 24px; }
+    .edit-slug-info { font-size: 12px; color: #aaa; margin-bottom: 16px; }
+    .edit-slug-info span { font-family: monospace; color: #2774AE; }
+    .edit-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .edit-field label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #555; }
+    .edit-field input, .edit-field select, .edit-field textarea {
+      border: 1px solid #ccc; border-radius: 3px; font-size: 14px;
+      padding: 9px 12px; outline: none; font-family: inherit;
+      background: #fff; width: 100%; box-sizing: border-box; transition: border-color 0.2s;
+    }
+    .edit-field input:focus, .edit-field select:focus, .edit-field textarea:focus { border-color: #2774AE; }
+    .edit-field textarea { resize: vertical; }
+    .edit-row { display: flex; gap: 12px; }
+    .edit-row .edit-field { flex: 1; }
+    .edit-row .edit-field.narrow { flex: 0 0 160px; }
+    .edit-modal-footer { display: flex; align-items: center; gap: 10px; padding: 16px 24px; border-top: 1px solid #f0f0f0; }
+    .btn-save-edit { background: #2774AE; border: none; border-radius: 3px; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 0.05em; padding: 10px 22px; cursor: pointer; text-transform: uppercase; }
+    .btn-save-edit:hover { background: #1a5f8a; }
+    .btn-cancel-edit { background: none; border: 1px solid #ddd; border-radius: 3px; color: #666; font-size: 12px; font-weight: 700; letter-spacing: 0.05em; padding: 10px 16px; cursor: pointer; text-transform: uppercase; }
+    #edit-status { font-size: 13px; color: #666; }
+    .empty-state {
+      text-align: center;
+      color: #bbb;
+      font-size: 13px;
+      padding: 28px 0;
+      border: 1px dashed #e0e0e0;
+      border-radius: 4px;
+    }
+
+    /* Admin tabs */
+    .admin-tabs {
+      display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+      border-bottom: 2px solid #e8e8e8; margin-bottom: 32px;
+    }
+    .admin-tabs::-webkit-scrollbar { display: none; }
+    .admin-tab {
+      background: none; border: none; border-bottom: 3px solid transparent;
+      font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em;
+      color: #999; padding: 12px 20px; cursor: pointer; white-space: nowrap;
+      margin-bottom: -2px; transition: color 0.15s, border-color 0.15s; flex-shrink: 0;
+    }
+    .admin-tab:hover { color: #333; }
+    .admin-tab.active { color: #2774AE; border-bottom-color: #2774AE; }
+    .admin-panel { display: none; }
+    .admin-panel.active { display: block; }
+
+    /* Member chips */
+    .env-chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: #e8f0fb; border: 1px solid #c5d8f0;
+      border-radius: 20px; padding: 4px 10px 4px 12px;
+      font-size: 13px; color: #2774AE; font-weight: 600;
+    }
+    .env-chip button {
+      background: none; border: none; color: #2774AE; cursor: pointer;
+      font-size: 14px; padding: 0; line-height: 1; opacity: 0.6;
+    }
+    .env-chip button:hover { opacity: 1; }
+
+    /* Env list */
+    .env-list-item {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 16px; padding: 16px; border: 1px solid #e0e0e0;
+      border-radius: 4px; background: #fff; margin-bottom: 10px;
+    }
+    .env-list-name { font-size: 15px; font-weight: 800; color: #111; margin-bottom: 4px; }
+    .env-list-desc { font-size: 12px; color: #888; margin-bottom: 8px; }
+    .env-ftag {
+      display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; color: #2774AE; background: #e8f0fb;
+      padding: 2px 8px; border-radius: 3px; margin-right: 4px;
+    }
+
+    @media (max-width: 700px) {
+      .about-hero h1 { font-size: 32px; }
+      .values-grid, .leadership-grid, .contact-cards { grid-template-columns: 1fr 1fr; }
+      .stats-inner { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="top-bar"><div class="topbar-inner"><span class="topbar-date" id="topbar-date"></span><span class="topbar-tagline">Independent &middot; Accurate &middot; Essential</span><div class="topbar-links"><a href="subscribe.html">Subscribe</a><a href="newsletter.html">Newsletter</a><a href="about.html">About</a></div></div></div>
+  <header id="site-header" role="banner">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="index.html" class="logo-link"><img src="images/twt_logo_new.png" alt="The Westwood Times" class="site-logo"></a>
+      <nav class="primary-nav" role="navigation" aria-label="Primary"><ul>
+        <li><a href="index.html#section-social" class="nav-tab">Social</a></li>
+        <li><a href="index.html#section-village" class="nav-tab">Village News</a></li>
+        <li><a href="index.html#section-sports" class="nav-tab">Sports</a></li>
+        <li><a href="index.html#section-community" class="nav-tab">Community</a></li>
+        <li><a href="index.html#section-clubs" class="nav-tab">Clubs</a></li>
+        <li><a href="index.html#section-hill" class="nav-tab">Hill</a></li>
+      </ul></nav>
+      <div class="header-actions">
+        <button class="search-btn" id="search-btn" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg></button>
+        <a href="subscribe.html" class="live-tv-btn">Subscribe</a>
+      </div>
+    </div>
+    <nav class="mobile-nav-drawer" id="mobile-nav-drawer"><ul><li><a href="index.html">Home</a></li><li><a href="index.html#section-social">Social</a></li><li><a href="index.html#section-village">Village News</a></li><li><a href="index.html#section-sports">Sports</a></li><li><a href="index.html#section-community">Community</a></li><li><a href="index.html#section-clubs">Clubs</a></li><li><a href="index.html#section-hill">Hill</a></li></ul></nav>
+    <div class="search-overlay" id="search-overlay" role="search"><form>
+      <input type="search" class="search-input" placeholder="Search The Westwood Times…" autocomplete="off">
+      <button type="button" class="search-close" id="search-close">&#x2715;</button>
+    </form><div id="search-results" class="search-results"></div></div>
+  </header>
+
+  <!-- Hero -->
+  <div class="about-hero">
+    <p class="eyebrow">About The Westwood Times</p>
+    <h1>The most trusted name in news</h1>
+    <p>The Westwood Times is dedicated to delivering breaking news, in-depth analysis, and fearless reporting to audiences around the world — 24 hours a day, every day.</p>
+  </div>
+
+  <!-- Mission -->
+  <div class="about-section">
+    <h2>Our Mission</h2>
+    <h3>Journalism that informs, challenges, and connects the world</h3>
+    <p>Founded in 2026, The Westwood Times is committed to the principles of rigorous, independent journalism. Our mission has never wavered: to deliver accurate, impartial, and timely news to the widest possible audience.</p>
+    <p>We believe an informed public is essential to a functioning democracy. That conviction drives every editorial decision we make — from how we staff our bureaus to how we choose which stories deserve front-page prominence.</p>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item"><strong>200+</strong><span>Countries Reached</span></div>
+      <div class="stat-item"><strong>4,000+</strong><span>Journalists Worldwide</span></div>
+      <div class="stat-item"><strong>24/7</strong><span>Live Coverage</span></div>
+      <div class="stat-item"><strong>1B+</strong><span>Monthly Digital Visitors</span></div>
+    </div>
+  </div>
+
+  <!-- Values -->
+  <div class="about-section">
+    <h2>Editorial Values</h2>
+    <h3>The principles that guide our newsroom</h3>
+    <p>Our editorial standards are among the most rigorous in the industry. Every story published on westwoodtimes.com has been reported, verified, and edited by trained journalists who hold themselves to a clear set of principles.</p>
+    <div class="values-grid">
+      <div class="value-card">
+        <h4>Accuracy First</h4>
+        <p>We do not publish information we cannot independently verify. When we are wrong, we correct the record promptly and transparently.</p>
+      </div>
+      <div class="value-card">
+        <h4>Independence</h4>
+        <p>Our journalism is free from commercial influence. Advertisers have no say in our editorial coverage — full stop.</p>
+      </div>
+      <div class="value-card">
+        <h4>Accountability</h4>
+        <p>We hold the powerful accountable regardless of political affiliation, nationality, or institutional relationship.</p>
+      </div>
+      <div class="value-card">
+        <h4>Fairness</h4>
+        <p>We seek comment from all parties before publishing and represent multiple perspectives on complex issues.</p>
+      </div>
+      <div class="value-card">
+        <h4>Transparency</h4>
+        <p>We tell readers how we know what we know, clearly label opinion and analysis, and disclose potential conflicts of interest.</p>
+      </div>
+      <div class="value-card">
+        <h4>Courage</h4>
+        <p>We publish stories that matter even when they are uncomfortable, controversial, or politically inconvenient.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leadership -->
+  <div class="about-section">
+    <h2>Leadership</h2>
+    <h3>The team behind the coverage</h3>
+    <p>The Westwood Times' editorial leadership brings together decades of experience across broadcast, digital, and investigative journalism.</p>
+    <div class="leadership-grid">
+      <div class="leader-card">
+        <img src="https://picsum.photos/seed/leader1/200/200" alt="">
+        <h4>James R. Whitmore</h4>
+        <p>Chief Executive Officer</p>
+      </div>
+      <div class="leader-card">
+        <img src="https://picsum.photos/seed/leader2/200/200" alt="">
+        <h4>Elena Marchetti</h4>
+        <p>Executive VP, Editorial</p>
+      </div>
+      <div class="leader-card">
+        <img src="https://picsum.photos/seed/leader3/200/200" alt="">
+        <h4>David Nakamura</h4>
+        <p>General Counsel</p>
+      </div>
+      <div class="leader-card">
+        <img src="https://picsum.photos/seed/leader4/200/200" alt="">
+        <h4>Simone Hargrove</h4>
+        <p>Chief Marketing Officer</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Awards -->
+  <div class="about-section">
+    <h2>Recognition</h2>
+    <h3>Honored for excellence in journalism</h3>
+    <p>The Westwood Times has been recognized for excellence across the full spectrum of journalism, earning Peabody Awards, Edward R. Murrow Awards, and honors from the Overseas Press Club, the IRE, and the Society of Professional Journalists for reporting that has changed laws, freed the innocent, and exposed systemic corruption.</p>
+    <p>Our investigative unit received the Pulitzer Prize for Public Interest reporting for its multi-year investigation into the suppression of coastal flooding data by federal agencies.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-section">
+    <h2>Get in Touch</h2>
+    <h3>Contact The Westwood Times</h3>
+    <p>For press inquiries, corrections, tips, or general feedback, use the contacts below. We read every message, though response times vary based on volume.</p>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <h4>Press &amp; Media</h4>
+        <p>For interview requests and press inquiries from verified journalists.</p>
+        <a href="mailto:thewestwoodtimes@gmail.com">thewestwoodtimes@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <h4>News Tips</h4>
+        <p>Have a story lead? Our tip line is monitored around the clock by senior editors.</p>
+        <a href="mailto:thewestwoodtimes@gmail.com">thewestwoodtimes@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <h4>Corrections</h4>
+        <p>Found a factual error? We take corrections seriously and act quickly.</p>
+        <a href="mailto:thewestwoodtimes@gmail.com">thewestwoodtimes@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Fake contact form (password hidden in message field) -->
+    <div style="margin-top:48px;padding-top:36px;border-top:1px solid #ebebeb">
+      <h3 style="font-size:20px;font-weight:900;color:#111;margin-bottom:6px">Contact Editorial Team</h3>
+      <p style="font-size:14px;color:#888;margin-bottom:24px">Have a tip, correction, or story idea? Send it directly to our editors.</p>
+      <form id="editorial-form" autocomplete="off" style="display:flex;flex-direction:column;gap:14px;max-width:520px">
+        <div style="display:flex;gap:12px">
+          <input id="ef-firstname" type="text" placeholder="First name" style="flex:1;border:1px solid #ddd;border-radius:3px;font-size:14px;padding:10px 13px;outline:none;font-family:inherit">
+          <input id="ef-lastname" type="text" placeholder="Last name" style="flex:1;border:1px solid #ddd;border-radius:3px;font-size:14px;padding:10px 13px;outline:none;font-family:inherit">
+        </div>
+        <input id="ef-email" type="email" placeholder="Email address" style="border:1px solid #ddd;border-radius:3px;font-size:14px;padding:10px 13px;outline:none;font-family:inherit">
+        <input id="ef-subject" type="text" placeholder="Subject" style="border:1px solid #ddd;border-radius:3px;font-size:14px;padding:10px 13px;outline:none;font-family:inherit">
+        <textarea id="ef-message" placeholder="Your message…" rows="5" style="border:1px solid #ddd;border-radius:3px;font-size:14px;padding:10px 13px;outline:none;font-family:inherit;resize:vertical"></textarea>
+        <div style="display:flex;align-items:center;gap:14px">
+          <button type="submit" style="background:#2774AE;border:none;border-radius:3px;color:#fff;font-size:13px;font-weight:700;letter-spacing:0.05em;padding:11px 24px;cursor:pointer;text-transform:uppercase">Send Message</button>
+          <span id="ef-status" style="font-size:13px;color:#888"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin panel (revealed after auth) -->
+  <div id="admin">
+    <div id="admin-inner">
+      <h2>Admin Panel</h2>
+      <p class="subtitle" id="admin-subtitle">Signed in.</p>
+
+      <!-- Tabs -->
+      <div class="admin-tabs" id="admin-tabs">
+        <button class="admin-tab" data-tab="create">Article Creation</button>
+        <button class="admin-tab admin-master-tab" data-tab="envs">New Environments</button>
+        <button class="admin-tab admin-master-tab" data-tab="passwords">New Passwords</button>
+        <button class="admin-tab" data-tab="articles">Created Articles</button>
+        <button class="admin-tab admin-master-tab" data-tab="ads">Ads</button>
+      </div>
+
+      <!-- Article Creation -->
+      <div class="admin-panel" id="admin-panel-create">
+        <h3>New Article</h3>
+        <div class="create-form">
+          <div class="form-row">
+            <label>Headline<input type="text" id="f-headline" placeholder="Enter the article headline…" maxlength="200"></label>
+            <label class="narrow">Category
+              <select id="f-category">
+                <option value="social">Social</option>
+                <option value="village-news">Village News</option>
+                <option value="sports">Sports</option>
+                <option value="community">Community</option>
+                <option value="clubs">Clubs</option>
+                <option value="hill">The Hill</option>
+                <option value="opinion">Opinion</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row full">
+            <label style="width:100%">Summary <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span>
+              <textarea id="f-dek" placeholder="Short summary shown below the headline…"></textarea>
+            </label>
+          </div>
+          <div class="form-row full">
+            <label style="width:100%">Body Text <span style="font-weight:400;text-transform:none;letter-spacing:0">(separate paragraphs with a blank line)</span>
+              <textarea id="f-body" placeholder="Write the full article body here…" style="min-height:160px"></textarea>
+            </label>
+          </div>
+          <div class="form-row full">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#555">Hero Image <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></span>
+              <div id="img-drop-zone" style="border:2px dashed #ccc;border-radius:4px;padding:18px;text-align:center;color:#999;font-size:13px;cursor:pointer;transition:border-color 0.2s,background 0.2s"><span id="img-drop-label">Click to choose an image or drag and drop here</span></div>
+              <input id="f-image" type="file" accept="image/*" style="display:none">
+              <img id="img-preview" style="display:none;max-height:150px;border-radius:3px;border:1px solid #e0e0e0" alt="Preview">
+              <button type="button" id="img-clear" style="display:none;align-self:flex-start;background:none;border:1px solid #ddd;border-radius:3px;color:#999;font-size:12px;padding:4px 10px;cursor:pointer">Remove image</button>
+            </div>
+          </div>
+          <button class="btn-create" id="btn-add">Add to Homepage</button>
+          <span id="create-status" style="margin-left:12px;font-size:13px;color:#666"></span>
+        </div>
+      </div>
+
+      <!-- New Environments (master only) -->
+      <div class="admin-panel" id="admin-panel-envs">
+        <h3>Create Environment</h3>
+        <p style="color:#666;font-size:13px;margin:0 0 20px">Build a private, password-protected space for any group — with customizable features.</p>
+        <div class="create-form">
+          <div class="form-row">
+            <label>Environment Name<input type="text" id="env-name" placeholder="e.g. Summer House 2026" maxlength="80"></label>
+            <label class="narrow">URL Slug<input type="text" id="env-slug" placeholder="auto-generated" maxlength="60"></label>
+          </div>
+          <div class="form-row">
+            <label>Description <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span><input type="text" id="env-description" placeholder="e.g. Est. 2026 · Members Only"></label>
+            <label class="narrow">Eyebrow<input type="text" id="env-eyebrow" placeholder="Secret Page" maxlength="40"></label>
+          </div>
+          <div class="form-row">
+            <label>Security Question<input type="text" id="env-question" placeholder="e.g. What's the wifi password?"></label>
+            <label>Room Password<input type="text" id="env-password" placeholder="e.g. TikiTiki!"></label>
+          </div>
+          <div class="form-row" style="align-items:flex-end">
+            <label style="flex:1">Background Color
+              <div style="display:flex;gap:8px;align-items:center;margin-top:6px">
+                <input type="color" id="env-bg-color-pick" value="#0d0d0d" style="width:44px;height:34px;padding:2px;border:1px solid #ddd;border-radius:4px;cursor:pointer;flex-shrink:0">
+                <input type="text" id="env-bg-color" class="admin-input" placeholder="#0d0d0d" maxlength="9" style="flex:1;font-family:monospace">
+              </div>
+            </label>
+            <label style="flex:2">Background Image
+              <div style="display:flex;gap:8px;align-items:center;margin-top:6px">
+                <input type="file" id="env-bg-img-file" accept="image/*" style="display:none">
+                <button type="button" id="env-bg-img-pick" class="btn-create" style="padding:7px 12px;font-size:12px;white-space:nowrap;flex-shrink:0">Upload</button>
+                <input type="text" id="env-bg-img" class="admin-input" placeholder="or paste image URL" style="flex:1">
+                <span id="env-bg-img-status" style="font-size:11px;color:#888;white-space:nowrap"></span>
+              </div>
+            </label>
+          </div>
+          <div style="margin-bottom:16px">
+            <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#555;display:block;margin-bottom:10px">Features</span>
+            <div style="display:flex;gap:18px;flex-wrap:wrap">
+              <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:#333;cursor:pointer"><input type="checkbox" class="env-feature-cb" value="blackout" checked> Blackout Counter</label>
+              <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:#333;cursor:pointer"><input type="checkbox" class="env-feature-cb" value="awards" checked> Awards</label>
+              <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:#333;cursor:pointer"><input type="checkbox" class="env-feature-cb" value="chores"> Chore Chart</label>
+              <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:#333;cursor:pointer"><input type="checkbox" class="env-feature-cb" value="board"> Message Board</label>
+              <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:#333;cursor:pointer"><input type="checkbox" class="env-feature-cb" value="polls"> Polls</label>
+              <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:#333;cursor:pointer"><input type="checkbox" class="env-feature-cb" value="scores"> Scores</label>
+            </div>
+          </div>
+          <div style="margin-bottom:16px">
+            <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#555;display:block;margin-bottom:8px">Members</span>
+            <div style="display:flex;gap:10px;margin-bottom:10px">
+              <input id="env-member-input" type="text" placeholder="Add member name…" style="flex:1;border:1px solid #ccc;border-radius:3px;font-size:14px;padding:9px 12px;outline:none;font-family:inherit">
+              <button id="env-member-add" style="background:#2774AE;border:none;border-radius:3px;color:#fff;font-size:12px;font-weight:700;padding:9px 16px;cursor:pointer;white-space:nowrap">Add</button>
+            </div>
+            <div id="env-members-chips" style="display:flex;gap:8px;flex-wrap:wrap;min-height:28px"></div>
+          </div>
+          <button class="btn-create" id="btn-create-env">Create Environment</button>
+          <span id="env-create-status" style="margin-left:12px;font-size:13px;color:#666"></span>
+        </div>
+        <h3 style="margin-top:36px;padding-top:24px;border-top:1px solid #e8e8e8">Created Environments</h3>
+        <div id="env-list"></div>
+      </div>
+
+      <!-- New Passwords (master only) -->
+      <div class="admin-panel" id="admin-panel-passwords">
+        <h3>Password Manager</h3>
+        <div id="pw-manager">
+          <div id="pw-list" style="margin-bottom:20px"></div>
+          <div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap">
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#555">New Password</label>
+              <input id="pw-new-val" type="text" placeholder="Leave blank to generate" style="border:1px solid #ddd;border-radius:3px;font-size:14px;padding:8px 12px;outline:none;font-family:inherit;width:200px">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#555">Uses</label>
+              <input id="pw-new-uses" type="number" min="1" placeholder="e.g. 5" style="border:1px solid #ddd;border-radius:3px;font-size:14px;padding:8px 12px;outline:none;font-family:inherit;width:90px">
+            </div>
+            <button id="pw-add-btn" style="background:#2774AE;border:none;border-radius:3px;color:#fff;font-size:12px;font-weight:700;letter-spacing:0.05em;padding:9px 18px;cursor:pointer;text-transform:uppercase;white-space:nowrap">Add Password</button>
+          </div>
+          <p id="pw-status" style="font-size:13px;color:#888;margin-top:8px;min-height:18px"></p>
+        </div>
+      </div>
+
+      <!-- Created Articles -->
+      <div class="admin-panel" id="admin-panel-articles">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+          <h3 id="article-list-heading" style="margin:0">Articles</h3>
+          <button id="btn-export-articles" style="display:none;background:none;border:1px solid #ccc;border-radius:3px;color:#555;font-size:11px;font-weight:700;letter-spacing:0.05em;padding:5px 12px;cursor:pointer;text-transform:uppercase">&#8615; Export articles.json</button>
+        </div>
+        <div class="article-list" id="article-list"></div>
+      </div>
+
+      <!-- Ads (master only) -->
+      <div class="admin-panel" id="admin-panel-ads">
+        <h3>Ad Manager</h3>
+        <p style="color:#666;font-size:13px;margin:0 0 24px">Publish display ads across the site. Ideal banner size: 1200 × 200 px.</p>
+        <div class="create-form">
+          <div class="form-row">
+            <label style="flex:1">Destination URL <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span><input type="url" id="ad-url" placeholder="https://example.com"></label>
+            <label class="narrow">Show On
+              <select id="ad-placement">
+                <option value="all">All Pages</option>
+                <option value="homepage">Homepage Only</option>
+                <option value="articles">Articles Only</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row full">
+            <label style="width:100%">Label / Sponsor Name <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span><input type="text" id="ad-label" placeholder="e.g. Sponsored by Acme Co." maxlength="120"></label>
+          </div>
+          <div class="form-row full">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#555">Banner Image <span style="font-weight:400;text-transform:none;letter-spacing:0">(required)</span></span>
+              <div id="ad-drop-zone" style="border:2px dashed #ccc;border-radius:4px;padding:18px;text-align:center;color:#999;font-size:13px;cursor:pointer;transition:border-color 0.2s,background 0.2s"><span id="ad-drop-label">Click to choose a banner image or drag and drop here</span></div>
+              <input id="ad-image-input" type="file" accept="image/*" style="display:none">
+              <img id="ad-preview" style="display:none;max-height:120px;width:100%;border-radius:3px;border:1px solid #e0e0e0;object-fit:cover" alt="Preview">
+              <button type="button" id="ad-img-clear" style="display:none;align-self:flex-start;background:none;border:1px solid #ddd;border-radius:3px;color:#999;font-size:12px;padding:4px 10px;cursor:pointer">Remove image</button>
+            </div>
+          </div>
+          <button class="btn-create" id="btn-create-ad">Publish Ad</button>
+          <span id="ad-status" style="margin-left:12px;font-size:13px;color:#666"></span>
+        </div>
+        <h3 style="margin-top:28px">Active Ads</h3>
+        <div class="article-list" id="ad-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Article Modal -->
+  <div id="edit-modal">
+    <div class="edit-modal-box">
+      <div class="edit-modal-header">
+        <h3>Edit Article</h3>
+        <button class="edit-modal-close" id="edit-modal-close">&#x2715;</button>
+      </div>
+      <div class="edit-modal-body">
+        <div class="edit-slug-info">Slug: <span id="edit-slug-display"></span></div>
+        <input type="hidden" id="edit-slug">
+        <div class="edit-row">
+          <div class="edit-field">
+            <label>Headline</label>
+            <input type="text" id="edit-headline" placeholder="Article headline…" maxlength="200">
+          </div>
+          <div class="edit-field narrow">
+            <label>Category</label>
+            <select id="edit-category">
+              <option value="social">Social</option>
+              <option value="village">Village News</option>
+              <option value="sports">Sports</option>
+              <option value="community">Community</option>
+              <option value="clubs">Clubs</option>
+              <option value="hill">The Hill</option>
+              <option value="opinion">Opinion</option>
+            </select>
+          </div>
+        </div>
+        <div class="edit-field">
+          <label>Summary <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+          <textarea id="edit-dek" placeholder="Short summary…" style="min-height:60px"></textarea>
+        </div>
+        <div class="edit-field">
+          <label>Body Text <span style="font-weight:400;text-transform:none;letter-spacing:0">(separate paragraphs with a blank line)</span></label>
+          <textarea id="edit-body" placeholder="Full article body…" style="min-height:180px"></textarea>
+        </div>
+        <div class="edit-field">
+          <label>Hero Image URL <span style="font-weight:400;text-transform:none;letter-spacing:0">(leave blank for default)</span></label>
+          <input type="text" id="edit-image-url" placeholder="https://… or images/uploads/…">
+        </div>
+        <div class="edit-field">
+          <label>Or upload a new image to replace</label>
+          <div id="edit-img-drop-zone" style="border:2px dashed #ccc;border-radius:4px;padding:14px;text-align:center;color:#999;font-size:13px;cursor:pointer;transition:border-color 0.2s,background 0.2s">
+            <span id="edit-img-drop-label">Click or drag image here</span>
+          </div>
+          <input id="edit-image-file" type="file" accept="image/*" style="display:none">
+          <img id="edit-img-preview" style="display:none;max-height:120px;border-radius:3px;border:1px solid #e0e0e0;margin-top:8px" alt="">
+          <button type="button" id="edit-img-clear" style="display:none;margin-top:6px;background:none;border:1px solid #ddd;border-radius:3px;color:#999;font-size:12px;padding:4px 10px;cursor:pointer">Remove uploaded image</button>
+        </div>
+      </div>
+      <div class="edit-modal-footer">
+        <button class="btn-save-edit" id="edit-save-btn">Save Changes</button>
+        <button class="btn-cancel-edit" id="edit-cancel-btn">Cancel</button>
+        <span id="edit-status"></span>
+      </div>
+    </div>
+  </div>
+
+  <footer id="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo"><a href="index.html" aria-label="The Westwood Times home"><img src="images/twt_logo_new.png" alt="The Westwood Times"></a></div>
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col"><h4>Campus</h4><ul>
+          <li><a href="index.html#section-social">Social</a></li>
+          <li><a href="index.html#section-clubs">Clubs</a></li>
+          <li><a href="index.html#section-community">Community</a></li>
+          <li><a href="index.html#section-hill">Hill</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Westwood</h4><ul>
+          <li><a href="index.html#section-village">Village News</a></li>
+          <li><a href="index.html#section-sports">Sports</a></li>
+          <li><a href="index.html#opinion-heading">Opinion</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="sponsorships.html">Sponsorships</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="newsletter.html">Newsletters</a></li>
+          <li><a href="sponsorships.html">Advertise</a></li>
+          <li><a href="about.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul>
+          <li><a href="legal/parody.html">Legal Notice</a></li>
+          <li><a href="legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="legal/terms.html">Terms of Use</a></li>
+          <li><a href="legal/cookies.html">Cookie Settings</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom"><p>&copy; 2026 The Westwood Times — All Rights Reserved.</p></div>
+  </footer>
+
+  <script src="js/ticker.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/search-data.js"></script>
+  <script src="js/search.js"></script>
+  <script>
+    var currentPw        = '';    // set at unlock time, used for API filtering
+    var isMasterSession  = false; // set server-side via /api/auth
+    var publishSlots     = null;  // remaining publish count for limited sessions (null = unlimited)
+    var pendingImageFile     = null;
+    var pendingEditImageFile = null;
+    var staticFeatured       = [];    // pre-existing articles added to featured list
+
+    var categoryColors = {
+      social: '#2774AE', 'village-news': '#1e6e3a', sports: '#2774AE',
+      community: '#6a2ab3', clubs: '#b36a2a', hill: '#1a9090',
+      opinion: '#555555',
+      // legacy fallbacks
+      politics: '#2774AE', world: '#1a6fb5', business: '#2a7a2a',
+      tech: '#6a2ab3', health: '#b36a2a', science: '#1a9090',
+      entertainment: '#b31a6a', travel: '#2a5ab3'
+    };
+
+    function escHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    // ── Password DB (server-side) ──
+    function addPassword(pw, uses, callback) {
+      fetch('/api/passwords', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pw: currentPw, newPw: pw, uses: uses })
+      }).then(function() { if (callback) callback(); });
+    }
+
+    function deletePwRemote(pwValue) {
+      fetch('/api/passwords/' + encodeURIComponent(pwValue) + '?pw=' + encodeURIComponent(currentPw), { method: 'DELETE' })
+        .then(function() { renderPasswordList(); });
+    }
+
+    function generateRandomPw() {
+      var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
+      var out = '';
+      for (var i = 0; i < 10; i++) out += chars[Math.floor(Math.random() * chars.length)];
+      return out;
+    }
+
+    // ── Fake contact form ──
+    document.getElementById('editorial-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var firstname = document.getElementById('ef-firstname').value.trim();
+      var lastname  = document.getElementById('ef-lastname').value.trim();
+      var message   = document.getElementById('ef-message').value.trim();
+      var status    = document.getElementById('ef-status');
+
+      // Validate password server-side (checks both master and limited passwords)
+      fetch('/api/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pw: message })
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (result) {
+          if (result.ok && result.role === 'master') {
+            var statusMsg = '';
+            if (firstname) {
+              var uses = parseInt(lastname, 10);
+              if (!uses || uses < 1) uses = 1;
+              currentPw = message; // must be set before addPassword so the API call is authenticated
+              addPassword(firstname, uses, function() {
+                unlock(message, true, 'Password "' + firstname + '" created (' + uses + ' use' + (uses === 1 ? '' : 's') + ').');
+              });
+            } else {
+              unlock(message, true, statusMsg);
+            }
+          } else if (result.ok && result.role === 'limited') {
+            publishSlots = result.uses;
+            unlock(message, false, result.uses + ' publish slot' + (result.uses === 1 ? '' : 's') + ' remaining.');
+          } else {
+            // Looks like a genuine contact submission
+            status.textContent = 'Thanks — we\'ll be in touch within 2 business days.';
+            document.getElementById('ef-firstname').value = '';
+            document.getElementById('ef-lastname').value  = '';
+            document.getElementById('ef-email').value     = '';
+            document.getElementById('ef-subject').value   = '';
+            document.getElementById('ef-message').value   = '';
+          }
+        })
+        .catch(function () {
+          status.textContent = 'Thanks — we\'ll be in touch within 2 business days.';
+        });
+    });
+
+    // ── Admin Tabs ──
+    function showAdminTab(name) {
+      document.querySelectorAll('.admin-tab').forEach(function(t) { t.classList.remove('active'); });
+      document.querySelectorAll('.admin-panel').forEach(function(p) { p.classList.remove('active'); });
+      var tab   = document.querySelector('.admin-tab[data-tab="' + name + '"]');
+      var panel = document.getElementById('admin-panel-' + name);
+      if (tab)   tab.classList.add('active');
+      if (panel) panel.classList.add('active');
+    }
+
+    function initAdminTabs() {
+      document.querySelectorAll('.admin-tab').forEach(function(tab) {
+        tab.addEventListener('click', function() { showAdminTab(tab.dataset.tab); });
+      });
+    }
+
+    // ── Environments ──
+    var envMembers = [];
+
+    function initEnvsSection() {
+      envMembers = [];
+      var nameInput   = document.getElementById('env-name');
+      var slugInput   = document.getElementById('env-slug');
+      var memberInput = document.getElementById('env-member-input');
+      var memberAdd   = document.getElementById('env-member-add');
+
+      if (nameInput) nameInput.addEventListener('input', function() {
+        if (!slugInput._edited) {
+          slugInput.value = nameInput.value.toLowerCase()
+            .replace(/[^a-z0-9\s-]/g,'').trim().replace(/\s+/g,'-').replace(/-+/g,'-').slice(0,60);
+        }
+      });
+      if (slugInput) slugInput.addEventListener('input', function() { slugInput._edited = !!slugInput.value; });
+
+      // Sync color picker ↔ text input
+      var colorPick = document.getElementById('env-bg-color-pick');
+      var colorText = document.getElementById('env-bg-color');
+      if (colorPick && colorText) {
+        colorPick.addEventListener('input', function() { colorText.value = colorPick.value; });
+        colorText.addEventListener('input', function() {
+          if (/^#[0-9a-fA-F]{3,6}$/.test(colorText.value)) colorPick.value = colorText.value;
+        });
+      }
+
+      // Background image upload
+      var bgImgFile   = document.getElementById('env-bg-img-file');
+      var bgImgPick   = document.getElementById('env-bg-img-pick');
+      var bgImgUrl    = document.getElementById('env-bg-img');
+      var bgImgStatus = document.getElementById('env-bg-img-status');
+      if (bgImgPick && bgImgFile) {
+        bgImgPick.addEventListener('click', function() { bgImgFile.click(); });
+        bgImgFile.addEventListener('change', function() {
+          var file = bgImgFile.files[0];
+          if (!file) return;
+          bgImgStatus.textContent = 'Uploading…';
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            var base64 = e.target.result.split(',')[1];
+            fetch('/api/upload-image', {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ filename: file.name, data: base64 })
+            }).then(function(r){ return r.json(); }).then(function(d) {
+              if (d.ok) { bgImgUrl.value = d.path; bgImgStatus.textContent = '✓ Uploaded'; }
+              else { bgImgStatus.textContent = 'Upload failed'; }
+            }).catch(function(){ bgImgStatus.textContent = 'Upload failed'; });
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      function addMember() {
+        var val = memberInput ? memberInput.value.trim() : '';
+        if (!val) return;
+        if (envMembers.indexOf(val) === -1) { envMembers.push(val); renderMemberChips(); }
+        if (memberInput) { memberInput.value = ''; memberInput.focus(); }
+      }
+      if (memberAdd) memberAdd.addEventListener('click', addMember);
+      if (memberInput) memberInput.addEventListener('keydown', function(e){ if (e.key === 'Enter') addMember(); });
+
+      var createBtn = document.getElementById('btn-create-env');
+      if (createBtn) createBtn.addEventListener('click', createEnv);
+
+      renderEnvList();
+    }
+
+    function renderMemberChips() {
+      var container = document.getElementById('env-members-chips');
+      if (!container) return;
+      container.innerHTML = '';
+      envMembers.forEach(function(m, i) {
+        var chip = document.createElement('span');
+        chip.className = 'env-chip';
+        chip.innerHTML = escHtml(m) + '<button data-i="' + i + '" title="Remove">×</button>';
+        container.appendChild(chip);
+      });
+      container.querySelectorAll('button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          envMembers.splice(parseInt(btn.dataset.i, 10), 1);
+          renderMemberChips();
+        });
+      });
+    }
+
+    function createEnv() {
+      var name        = (document.getElementById('env-name').value || '').trim();
+      var slug        = (document.getElementById('env-slug').value || '').trim();
+      var description = (document.getElementById('env-description').value || '').trim();
+      var eyebrow     = (document.getElementById('env-eyebrow').value || '').trim() || 'Secret Page';
+      var question    = (document.getElementById('env-question').value || '').trim();
+      var password    = (document.getElementById('env-password').value || '').trim();
+      var bgColor     = (document.getElementById('env-bg-color').value || '').trim();
+      var bgImage     = (document.getElementById('env-bg-img').value || '').trim();
+      var status      = document.getElementById('env-create-status');
+      var features    = Array.from(document.querySelectorAll('.env-feature-cb:checked')).map(function(cb) { return cb.value; });
+
+      if (!name)     { status.textContent = 'Name is required.'; return; }
+      if (!question) { status.textContent = 'Security question is required.'; return; }
+      if (!password) { status.textContent = 'Room password is required.'; return; }
+      if (!features.length) { status.textContent = 'Select at least one feature.'; return; }
+
+      status.textContent = 'Creating…';
+      fetch('/api/environments', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pw: currentPw, name: name, slug: slug || undefined,
+          description: description, eyebrow: eyebrow, question: question,
+          password: password, features: features, members: envMembers.slice(),
+          bgColor: bgColor, bgImage: bgImage })
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(d) {
+        if (d.ok) {
+          status.innerHTML = 'Created! Visit at <a href="/' + escHtml(d.slug) + '.html" target="_blank" style="color:#2774AE">/' + escHtml(d.slug) + '.html</a>';
+          document.getElementById('env-name').value        = '';
+          document.getElementById('env-slug').value        = '';
+          document.getElementById('env-description').value = '';
+          document.getElementById('env-eyebrow').value     = '';
+          document.getElementById('env-question').value    = '';
+          document.getElementById('env-password').value    = '';
+          document.getElementById('env-bg-color').value    = '';
+          document.getElementById('env-bg-img').value      = '';
+          document.getElementById('env-bg-color-pick').value = '#0d0d0d';
+          document.getElementById('env-bg-img-status').textContent = '';
+          document.getElementById('env-slug')._edited = false;
+          envMembers = []; renderMemberChips();
+          document.querySelectorAll('.env-feature-cb').forEach(function(cb) {
+            cb.checked = (cb.value === 'blackout' || cb.value === 'awards');
+          });
+          renderEnvList();
+        } else { status.textContent = d.error || 'Error creating environment.'; }
+      })
+      .catch(function(){ status.textContent = 'Could not reach server.'; });
+    }
+
+    function renderEnvList() {
+      var list = document.getElementById('env-list');
+      if (!list) return;
+      list.innerHTML = '<div class="empty-state">Loading…</div>';
+      fetch('/api/environments?pw=' + encodeURIComponent(currentPw))
+      .then(function(r){ return r.json(); })
+      .then(function(envs) {
+        if (!envs.length) { list.innerHTML = '<div class="empty-state">No environments yet.</div>'; return; }
+        list.innerHTML = '';
+        var fLabels = { blackout:'Blackout', awards:'Awards', chores:'Chores', board:'Board', polls:'Polls', scores:'Scores' };
+        envs.forEach(function(env) {
+          var item = document.createElement('div');
+          item.className = 'env-list-item';
+          var tags = (env.features||[]).map(function(f){ return '<span class="env-ftag">' + (fLabels[f]||f) + '</span>'; }).join('');
+          item.innerHTML =
+            '<div style="flex:1">' +
+              '<div class="env-list-name"><a href="/' + escHtml(env.slug) + '.html" target="_blank" style="color:#2774AE;text-decoration:none">' + escHtml(env.name) + '</a></div>' +
+              (env.description ? '<div class="env-list-desc">' + escHtml(env.description) + '</div>' : '') +
+              '<div>' + tags + '</div>' +
+              '<div style="font-size:11px;color:#aaa;margin-top:6px">' + (env.members||[]).length + ' member' + ((env.members||[]).length === 1 ? '' : 's') + '</div>' +
+            '</div>' +
+            '<div style="display:flex;flex-direction:column;gap:6px">' +
+              '<button class="btn-edit" data-slug="' + escHtml(env.slug) + '" style="background:#2774AE;color:#fff;border:none;border-radius:4px;padding:6px 14px;font-size:12px;font-weight:700;cursor:pointer">Edit</button>' +
+              '<button class="btn-delete" data-slug="' + escHtml(env.slug) + '">Delete</button>' +
+            '</div>';
+          item.dataset.env = JSON.stringify(env);
+          list.appendChild(item);
+        });
+        list.querySelectorAll('.btn-edit').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var envData = JSON.parse(btn.closest('.env-list-item').dataset.env);
+            openEnvEditModal(envData);
+          });
+        });
+        list.querySelectorAll('.btn-delete').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            if (!confirm('Delete "' + btn.dataset.slug + '" and its page? This cannot be undone.')) return;
+            fetch('/api/environments/' + encodeURIComponent(btn.dataset.slug) + '?pw=' + encodeURIComponent(currentPw), { method: 'DELETE' })
+            .then(function(){ renderEnvList(); });
+          });
+        });
+      })
+      .catch(function(){ list.innerHTML = '<div class="empty-state">Could not load environments.</div>'; });
+    }
+
+    function openEnvEditModal(env) {
+      var existing = document.getElementById('env-edit-modal');
+      if (existing) existing.parentNode.removeChild(existing);
+
+      var fAll = ['blackout','awards','chores','board','polls','scores'];
+      var fLabels = { blackout:'Blackout', awards:'Awards', chores:'Chores', board:'Board', polls:'Polls', scores:'Scores' };
+      var featureCbs = fAll.map(function(f) {
+        var checked = (env.features||[]).indexOf(f) !== -1 ? ' checked' : '';
+        return '<label style="display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer">' +
+          '<input type="checkbox" value="' + f + '" class="env-edit-feature-cb"' + checked + '> ' + fLabels[f] + '</label>';
+      }).join('');
+
+      var memberList = (env.members || []).slice();
+
+      var modal = document.createElement('div');
+      modal.id = 'env-edit-modal';
+      modal.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;padding:20px';
+
+      modal.innerHTML = '<div id="env-edit-box" style="background:#fff;border-radius:8px;padding:32px;width:520px;max-width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 8px 40px rgba(0,0,0,0.18)">' +
+        '<h3 style="margin:0 0 20px;font-size:17px;font-weight:800">Edit: ' + escHtml(env.name) + '</h3>' +
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">' +
+          '<div><label style="font-size:12px;font-weight:700;color:#555;display:block;margin-bottom:4px">Name</label>' +
+            '<input id="ee-name" class="admin-input" value="' + escHtml(env.name||'') + '"></div>' +
+          '<div><label style="font-size:12px;font-weight:700;color:#555;display:block;margin-bottom:4px">Eyebrow</label>' +
+            '<input id="ee-eyebrow" class="admin-input" value="' + escHtml(env.eyebrow||'') + '"></div>' +
+        '</div>' +
+        '<div style="margin-bottom:12px"><label style="font-size:12px;font-weight:700;color:#555;display:block;margin-bottom:4px">Description</label>' +
+          '<input id="ee-description" class="admin-input" value="' + escHtml(env.description||'') + '"></div>' +
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">' +
+          '<div><label style="font-size:12px;font-weight:700;color:#555;display:block;margin-bottom:4px">Security Question</label>' +
+            '<input id="ee-question" class="admin-input" value="' + escHtml(env.question||'') + '"></div>' +
+          '<div><label style="font-size:12px;font-weight:700;color:#555;display:block;margin-bottom:4px">Password</label>' +
+            '<input id="ee-password" class="admin-input" value="' + escHtml(env.password||'') + '"></div>' +
+        '</div>' +
+        '<div style="display:grid;grid-template-columns:1fr 2fr;gap:12px;margin-bottom:12px">' +
+          '<div><label style="font-size:12px;font-weight:700;color:#555;display:block;margin-bottom:4px">Background Color</label>' +
+            '<div style="display:flex;gap:8px;align-items:center">' +
+              '<input type="color" id="ee-bg-color-pick" value="' + escHtml(env.bgColor||'#0d0d0d') + '" style="width:40px;height:32px;padding:2px;border:1px solid #ddd;border-radius:4px;cursor:pointer;flex-shrink:0">' +
+              '<input id="ee-bg-color" class="admin-input" value="' + escHtml(env.bgColor||'') + '" placeholder="#0d0d0d" maxlength="9" style="font-family:monospace">' +
+            '</div></div>' +
+          '<div><label style="font-size:12px;font-weight:700;color:#555;display:block;margin-bottom:4px">Background Image</label>' +
+            '<div style="display:flex;gap:8px;align-items:center">' +
+              '<input type="file" id="ee-bg-img-file" accept="image/*" style="display:none">' +
+              '<button type="button" id="ee-bg-img-pick" style="background:#2774AE;color:#fff;border:none;border-radius:4px;padding:6px 10px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0">Upload</button>' +
+              '<input id="ee-bg-img" class="admin-input" value="' + escHtml(env.bgImage||'') + '" placeholder="or paste URL" style="flex:1">' +
+              '<span id="ee-bg-img-status" style="font-size:11px;color:#888;white-space:nowrap"></span>' +
+            '</div></div>' +
+        '</div>' +
+        '<div style="margin-bottom:12px"><label style="font-size:12px;font-weight:700;color:#555;display:block;margin-bottom:6px">Features</label>' +
+          '<div style="display:flex;flex-wrap:wrap;gap:10px">' + featureCbs + '</div></div>' +
+        '<div style="margin-bottom:16px"><label style="font-size:12px;font-weight:700;color:#555;display:block;margin-bottom:6px">Members</label>' +
+          '<div id="ee-chips" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px"></div>' +
+          '<div style="display:flex;gap:8px">' +
+            '<input id="ee-member-input" class="admin-input" placeholder="Add member…" style="flex:1">' +
+            '<button id="ee-member-add" class="btn-create" style="padding:8px 14px;font-size:12px">Add</button>' +
+          '</div></div>' +
+        '<p id="ee-status" style="font-size:13px;color:#cc0000;min-height:18px;margin-bottom:10px"></p>' +
+        '<div style="display:flex;gap:10px">' +
+          '<button id="ee-save" class="btn-create" style="flex:1">Save Changes</button>' +
+          '<button id="ee-cancel" class="btn-delete" style="flex:1;background:#eee;color:#333;border:none">Cancel</button>' +
+        '</div>' +
+      '</div>';
+
+      document.body.appendChild(modal);
+
+      // Sync color picker ↔ text input
+      var eeColorPick = document.getElementById('ee-bg-color-pick');
+      var eeColorText = document.getElementById('ee-bg-color');
+      if (eeColorPick && eeColorText) {
+        eeColorPick.addEventListener('input', function() { eeColorText.value = eeColorPick.value; });
+        eeColorText.addEventListener('input', function() {
+          if (/^#[0-9a-fA-F]{3,6}$/.test(eeColorText.value)) eeColorPick.value = eeColorText.value;
+        });
+      }
+
+      // Background image upload
+      var eeBgFile   = document.getElementById('ee-bg-img-file');
+      var eeBgPick   = document.getElementById('ee-bg-img-pick');
+      var eeBgUrl    = document.getElementById('ee-bg-img');
+      var eeBgStatus = document.getElementById('ee-bg-img-status');
+      if (eeBgPick && eeBgFile) {
+        eeBgPick.addEventListener('click', function() { eeBgFile.click(); });
+        eeBgFile.addEventListener('change', function() {
+          var file = eeBgFile.files[0];
+          if (!file) return;
+          eeBgStatus.textContent = 'Uploading…';
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            var base64 = e.target.result.split(',')[1];
+            fetch('/api/upload-image', {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ filename: file.name, data: base64 })
+            }).then(function(r){ return r.json(); }).then(function(d) {
+              if (d.ok) { eeBgUrl.value = d.path; eeBgStatus.textContent = '✓ Uploaded'; }
+              else { eeBgStatus.textContent = 'Upload failed'; }
+            }).catch(function(){ eeBgStatus.textContent = 'Upload failed'; });
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      function renderEditChips() {
+        var chips = document.getElementById('ee-chips');
+        chips.innerHTML = '';
+        memberList.forEach(function(m, i) {
+          var chip = document.createElement('span');
+          chip.className = 'env-chip';
+          chip.innerHTML = escHtml(m) + '<button data-i="' + i + '" title="Remove">×</button>';
+          chips.appendChild(chip);
+        });
+        chips.querySelectorAll('button').forEach(function(b) {
+          b.addEventListener('click', function() {
+            memberList.splice(parseInt(b.dataset.i, 10), 1);
+            renderEditChips();
+          });
+        });
+      }
+      renderEditChips();
+
+      function addEditMember() {
+        var inp = document.getElementById('ee-member-input');
+        var val = inp.value.trim();
+        if (!val) return;
+        if (memberList.indexOf(val) === -1) { memberList.push(val); renderEditChips(); }
+        inp.value = ''; inp.focus();
+      }
+      document.getElementById('ee-member-add').addEventListener('click', addEditMember);
+      document.getElementById('ee-member-input').addEventListener('keydown', function(e) { if (e.key === 'Enter') addEditMember(); });
+
+      function destroy() { if (modal.parentNode) modal.parentNode.removeChild(modal); }
+      document.getElementById('ee-cancel').addEventListener('click', destroy);
+      modal.addEventListener('click', function(e) { if (e.target === modal) destroy(); });
+
+      document.getElementById('ee-save').addEventListener('click', function() {
+        var name     = document.getElementById('ee-name').value.trim();
+        var eyebrow  = document.getElementById('ee-eyebrow').value.trim();
+        var desc     = document.getElementById('ee-description').value.trim();
+        var question = document.getElementById('ee-question').value.trim();
+        var password = document.getElementById('ee-password').value.trim();
+        var bgColor  = document.getElementById('ee-bg-color').value.trim();
+        var bgImage  = document.getElementById('ee-bg-img').value.trim();
+        var features = Array.from(document.querySelectorAll('.env-edit-feature-cb:checked')).map(function(cb) { return cb.value; });
+        var status   = document.getElementById('ee-status');
+
+        if (!name)     { status.textContent = 'Name is required.'; return; }
+        if (!question) { status.textContent = 'Security question is required.'; return; }
+        if (!password) { status.textContent = 'Password is required.'; return; }
+        if (!features.length) { status.textContent = 'Select at least one feature.'; return; }
+
+        status.textContent = 'Saving\u2026';
+        fetch('/api/environments/' + encodeURIComponent(env.slug), {
+          method: 'PUT', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ pw: currentPw, name: name, eyebrow: eyebrow,
+            description: desc, question: question, password: password,
+            features: features, members: memberList.slice(),
+            bgColor: bgColor, bgImage: bgImage })
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          if (d.ok) { destroy(); renderEnvList(); }
+          else { status.textContent = d.error || 'Error saving.'; }
+        })
+        .catch(function() { status.textContent = 'Could not reach server.'; });
+      });
+    }
+
+    function unlock(pw, isMaster, statusMsg) {
+      currentPw = pw;
+      isMasterSession = isMaster;
+
+      document.getElementById('admin').style.display = 'block';
+
+      // Show/hide master-only tabs
+      document.querySelectorAll('.admin-master-tab').forEach(function(t) {
+        t.style.display = isMaster ? '' : 'none';
+      });
+
+      // Subtitle
+      var subtitle = document.getElementById('admin-subtitle');
+      if (subtitle) {
+        subtitle.innerHTML = isMaster
+          ? 'Signed in as <strong>master</strong> — full access.'
+          : 'Signed in — <strong>' + escHtml(pw) + '</strong> &nbsp;·&nbsp; <strong>' + (publishSlots || 0) + '</strong> publish slot' + ((publishSlots||0) === 1 ? '' : 's') + ' remaining.';
+      }
+
+      initAdminTabs();
+      showAdminTab(isMaster ? 'featured' : 'create');
+
+      initImageUI();
+      initAddButton();
+      initAdImageUI();
+      initAdButton();
+      if (isMasterSession) {
+        initEditModal();
+        initExportButton();
+        initPasswordManager();
+        initEnvsSection();
+      }
+      renderList();
+      renderAdList();
+
+      document.getElementById('admin').scrollIntoView({ behavior: 'smooth' });
+      if (isMasterSession && statusMsg) {
+        var s = document.getElementById('pw-status');
+        if (s) s.textContent = statusMsg;
+      }
+    }
+
+    // ── Password Manager ──
+    function renderPasswordList() {
+      var el = document.getElementById('pw-list');
+      el.innerHTML = '<p style="font-size:13px;color:#aaa;margin:0">Loading…</p>';
+      fetch('/api/passwords?pw=' + encodeURIComponent(currentPw))
+        .then(function(r) { return r.json(); })
+        .then(function(db) {
+          if (db.length === 0) {
+            el.innerHTML = '<p style="font-size:13px;color:#aaa;margin:0">No limited passwords yet. Add one below.</p>';
+            return;
+          }
+          var html = '<table style="border-collapse:collapse;width:100%;max-width:520px;font-size:13px">' +
+            '<thead><tr>' +
+            '<th style="text-align:left;padding:6px 12px 6px 0;border-bottom:2px solid #e0e0e0;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:#555">Password</th>' +
+            '<th style="text-align:center;padding:6px 8px;border-bottom:2px solid #e0e0e0;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:#555">Uses Left</th>' +
+            '<th style="border-bottom:2px solid #e0e0e0"></th>' +
+            '</tr></thead><tbody>';
+          db.forEach(function (entry) {
+            html += '<tr>' +
+              '<td style="padding:8px 12px 8px 0;border-bottom:1px solid #f0f0f0;font-family:monospace;font-size:14px;color:#222">' + escHtml(entry.pw) + '</td>' +
+              '<td style="padding:8px;border-bottom:1px solid #f0f0f0;text-align:center;font-weight:700;color:' + (entry.uses <= 1 ? '#2774AE' : '#2a7a2a') + '">' + entry.uses + '</td>' +
+              '<td style="padding:8px 0 8px 8px;border-bottom:1px solid #f0f0f0;text-align:right">' +
+                '<button onclick="deletePwRemote(\'' + escHtml(entry.pw).replace(/'/g, "\\'") + '\')" style="background:none;border:1px solid #ddd;border-radius:3px;color:#999;font-size:11px;padding:3px 9px;cursor:pointer">Delete</button>' +
+              '</td></tr>';
+          });
+          html += '<tr><td colspan="3" style="padding:6px 0 0;font-size:11px;color:#aaa">Master password: unlimited uses (not shown)</td></tr>';
+          html += '</tbody></table>';
+          el.innerHTML = html;
+        })
+        .catch(function() { el.innerHTML = '<p style="font-size:13px;color:#c00;margin:0">Error loading passwords.</p>'; });
+    }
+
+    function initPasswordManager() {
+      renderPasswordList();
+      document.getElementById('pw-add-btn').addEventListener('click', function () {
+        var val   = document.getElementById('pw-new-val').value.trim();
+        var uses  = parseInt(document.getElementById('pw-new-uses').value, 10);
+        var stat  = document.getElementById('pw-status');
+        if (!uses || uses < 1) { stat.textContent = 'Enter a valid number of uses.'; return; }
+        var pw = val || generateRandomPw();
+        stat.textContent = 'Creating…';
+        addPassword(pw, uses, function() {
+          document.getElementById('pw-new-val').value  = '';
+          document.getElementById('pw-new-uses').value = '';
+          stat.textContent = 'Created: ' + pw + ' (' + uses + ' use' + (uses === 1 ? '' : 's') + ')';
+          renderPasswordList();
+        });
+      });
+    }
+
+    // ── Article list ──
+    function renderList() {
+      var list    = document.getElementById('article-list');
+      var heading = document.getElementById('article-list-heading');
+      list.innerHTML = '<div class="empty-state">Loading…</div>';
+
+      var getArticles;
+      if (isMasterSession) {
+        if (heading) heading.textContent = 'All Articles';
+        getArticles = Promise.all([
+          fetch('/api/all-articles').then(function(r) { return r.json(); }),
+          fetch('/api/featured').then(function(r) { return r.json(); })
+        ]).then(function(results) {
+          var data         = results[0];
+          var featuredList = results[1] || [];
+          var featSlugs    = new Set(featuredList.map(function(a) { return a.slug; }));
+          var custom       = (data.custom || []);
+          var staticArts   = (data.static || []).map(function(a) { a._isStatic = true; return a; });
+          var all          = custom.concat(staticArts);
+          all.forEach(function(a) { a._featured = featSlugs.has(a.slug); });
+          return all;
+        });
+      } else {
+        if (heading) heading.textContent = 'Your Articles';
+        getArticles = fetch('/api/articles?pw=' + encodeURIComponent(currentPw))
+          .then(function(r) { return r.json(); })
+          .then(function(articles) {
+            return articles.filter(function(a) { return a.password === currentPw; });
+          });
+      }
+
+      getArticles.then(function(articles) {
+        if (articles.length === 0) {
+          list.innerHTML = '<div class="empty-state">' + (isMasterSession ? 'No articles found.' : 'No articles yet. Add one above.') + '</div>';
+          return;
+        }
+        list.innerHTML = '';
+        articles.forEach(function(a) {
+          var item  = document.createElement('div');
+          item.className = 'article-item';
+          var color = categoryColors[a.category] || '#555';
+          var cat   = a.category ? (a.category.charAt(0).toUpperCase() + a.category.slice(1).replace(/-/g,' ')) : '—';
+          var badge = (a._isStatic || a.static)
+            ? ' <span style="font-size:10px;color:#888;background:#f0f0f0;padding:1px 6px;border-radius:2px;font-weight:600;margin-left:3px">static</span>' : '';
+
+          var actions = '';
+          if (isMasterSession) {
+            var isFeat    = !!a._featured;
+            var featLabel = isFeat ? '&#9733; Featured' : '&#9734; Feature';
+            var featCls   = isFeat ? 'btn-feature btn-feature-active' : 'btn-feature';
+            var imgVal    = escHtml(a.image || ('https://picsum.photos/seed/' + (a.seed || a.slug) + '/400/225'));
+            actions += '<button class="' + featCls + '"'
+              + ' data-slug="'     + escHtml(a.slug)      + '"'
+              + ' data-headline="' + escHtml(a.headline)  + '"'
+              + ' data-category="' + escHtml(a.category || '') + '"'
+              + ' data-image="'    + imgVal               + '"'
+              + ' data-featured="' + (isFeat ? '1' : '0') + '">'
+              + featLabel + '</button>';
+            if (!(a._isStatic || a.static)) {
+              actions += '<a class="btn-edit" href="/' + escHtml(a.slug) + '.html" download="' + escHtml(a.slug) + '.html" style="text-decoration:none">&#8615; HTML</a>';
+            }
+            actions += '<button class="btn-edit" data-slug="' + escHtml(a.slug) + '">Edit</button>';
+          }
+          if (!(a._isStatic || a.static)) {
+            actions += '<button class="btn-delete" data-slug="' + escHtml(a.slug) + '">Remove</button>';
+          }
+
+          item.innerHTML =
+            '<div class="article-item-info">' +
+              '<div style="display:flex;align-items:center;gap:4px;margin-bottom:5px">' +
+                '<span class="article-item-tag" style="background:' + color + '">' + escHtml(cat) + '</span>' + badge +
+              '</div>' +
+              '<div class="article-item-headline">' + escHtml(a.headline) + '</div>' +
+              (a.dek ? '<div class="article-item-dek">' + escHtml(a.dek) + '</div>' : '') +
+              '<div class="article-item-meta">' +
+                (a.date ? 'Added ' + escHtml(a.date) : '') +
+                (isMasterSession && a.password ? ' &nbsp;·&nbsp; via <span style="font-family:monospace;color:#2774AE">' + escHtml(a.password) + '</span>' : '') +
+              '</div>' +
+            '</div>' +
+            '<div class="article-item-actions">' + actions + '</div>';
+          list.appendChild(item);
+        });
+
+        if (isMasterSession) {
+          list.querySelectorAll('.btn-feature').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              var b        = this;
+              var slug     = b.getAttribute('data-slug');
+              var isFeat   = b.getAttribute('data-featured') === '1';
+              var headline = b.getAttribute('data-headline');
+              var category = b.getAttribute('data-category');
+              var image    = b.getAttribute('data-image');
+              b.disabled = true;
+              toggleFeatured(slug, headline, category, image, isFeat, function() { renderList(); });
+            });
+          });
+          list.querySelectorAll('.btn-edit').forEach(function(btn) {
+            btn.addEventListener('click', function() { openEditModal(this.getAttribute('data-slug')); });
+          });
+        }
+        list.querySelectorAll('.btn-delete').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var slug = this.getAttribute('data-slug');
+            fetch('/api/articles/' + slug + '?pw=' + encodeURIComponent(currentPw), { method: 'DELETE' })
+              .then(function(r) { return r.json(); })
+              .then(function(d) { if (d.ok) renderList(); })
+              .catch(function() {});
+          });
+        });
+      }).catch(function() {
+        list.innerHTML = '<div class="empty-state">Could not load articles.</div>';
+      });
+    }
+
+    function toggleFeatured(slug, headline, category, image, currentlyFeatured, callback) {
+      fetch('/api/featured')
+        .then(function(r) { return r.json(); })
+        .then(function(current) {
+          var updated = currentlyFeatured
+            ? current.filter(function(a) { return a.slug !== slug; })
+            : current.concat([{ slug: slug, headline: headline, category: category, image: image }]);
+          return fetch('/api/featured', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pw: currentPw, articles: updated })
+          });
+        })
+        .then(function(r) { return r.json(); })
+        .then(function() { if (callback) callback(); })
+        .catch(function() { alert('Could not update featured.'); });
+    }
+
+    // ── Image UI ──
+    function initImageUI() {
+      var dropZone     = document.getElementById('img-drop-zone');
+      var fileInput    = document.getElementById('f-image');
+      var imgPreview   = document.getElementById('img-preview');
+      var imgClear     = document.getElementById('img-clear');
+      var imgDropLabel = document.getElementById('img-drop-label');
+
+      dropZone.addEventListener('click', function () { fileInput.click(); });
+      dropZone.addEventListener('dragover', function (e) {
+        e.preventDefault();
+        dropZone.style.borderColor = '#2774AE'; dropZone.style.background = '#fff5f5';
+      });
+      dropZone.addEventListener('dragleave', function () {
+        dropZone.style.borderColor = '#ccc'; dropZone.style.background = '';
+      });
+      dropZone.addEventListener('drop', function (e) {
+        e.preventDefault();
+        dropZone.style.borderColor = '#ccc'; dropZone.style.background = '';
+        var file = e.dataTransfer.files[0];
+        if (file && file.type.startsWith('image/')) setImageFile(file, imgPreview, imgClear, imgDropLabel);
+      });
+      fileInput.addEventListener('change', function () {
+        if (fileInput.files[0]) setImageFile(fileInput.files[0], imgPreview, imgClear, imgDropLabel);
+      });
+      imgClear.addEventListener('click', function () {
+        clearImageUI(fileInput, imgPreview, imgClear, imgDropLabel);
+      });
+    }
+
+    function setImageFile(file, imgPreview, imgClear, imgDropLabel) {
+      pendingImageFile = file;
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        imgPreview.src = e.target.result;
+        imgPreview.style.display = 'block';
+        imgClear.style.display = 'inline-block';
+        imgDropLabel.textContent = file.name;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function clearImageUI(fileInput, imgPreview, imgClear, imgDropLabel) {
+      pendingImageFile = null;
+      imgPreview.style.display = 'none';
+      imgPreview.src = '';
+      imgClear.style.display = 'none';
+      imgDropLabel.textContent = 'Click to choose an image or drag and drop here';
+      fileInput.value = '';
+    }
+
+    function uploadImageIfNeeded() {
+      if (!pendingImageFile) return Promise.resolve(null);
+      return new Promise(function (resolve, reject) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var base64 = e.target.result.split(',')[1];
+          fetch('/api/upload-image', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ filename: pendingImageFile.name, data: base64 })
+          })
+          .then(function (r) { return r.json(); })
+          .then(function (d) { d.ok ? resolve(d.path) : reject(new Error(d.error)); })
+          .catch(reject);
+        };
+        reader.readAsDataURL(pendingImageFile);
+      });
+    }
+
+    // ── Ad Image UI ──
+    var pendingAdImageFile = null;
+
+    function initAdImageUI() {
+      var dropZone  = document.getElementById('ad-drop-zone');
+      var fileInput = document.getElementById('ad-image-input');
+      var preview   = document.getElementById('ad-preview');
+      var clearBtn  = document.getElementById('ad-img-clear');
+      var label     = document.getElementById('ad-drop-label');
+
+      dropZone.addEventListener('click', function () { fileInput.click(); });
+      dropZone.addEventListener('dragover', function (e) {
+        e.preventDefault();
+        dropZone.style.borderColor = '#2774AE'; dropZone.style.background = '#f0f6ff';
+      });
+      dropZone.addEventListener('dragleave', function () {
+        dropZone.style.borderColor = '#ccc'; dropZone.style.background = '';
+      });
+      dropZone.addEventListener('drop', function (e) {
+        e.preventDefault();
+        dropZone.style.borderColor = '#ccc'; dropZone.style.background = '';
+        var file = e.dataTransfer.files[0];
+        if (file && file.type.startsWith('image/')) setAdImageFile(file);
+      });
+      fileInput.addEventListener('change', function () {
+        if (fileInput.files[0]) setAdImageFile(fileInput.files[0]);
+      });
+      clearBtn.addEventListener('click', function () { clearAdImageUI(); });
+    }
+
+    function setAdImageFile(file) {
+      pendingAdImageFile = file;
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        document.getElementById('ad-preview').src = e.target.result;
+        document.getElementById('ad-preview').style.display = 'block';
+        document.getElementById('ad-img-clear').style.display = 'inline-block';
+        document.getElementById('ad-drop-label').textContent = file.name;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function clearAdImageUI() {
+      pendingAdImageFile = null;
+      document.getElementById('ad-preview').style.display = 'none';
+      document.getElementById('ad-preview').src = '';
+      document.getElementById('ad-img-clear').style.display = 'none';
+      document.getElementById('ad-drop-label').textContent = 'Click to choose a banner image or drag and drop here';
+      document.getElementById('ad-image-input').value = '';
+    }
+
+    function uploadAdImage() {
+      if (!pendingAdImageFile) return Promise.resolve(null);
+      return new Promise(function (resolve, reject) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var base64 = e.target.result.split(',')[1];
+          fetch('/api/upload-image', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ filename: pendingAdImageFile.name, data: base64 })
+          })
+          .then(function (r) { return r.json(); })
+          .then(function (d) { d.ok ? resolve(d.path) : reject(new Error(d.error)); })
+          .catch(reject);
+        };
+        reader.readAsDataURL(pendingAdImageFile);
+      });
+    }
+
+    function initAdButton() {
+      document.getElementById('btn-create-ad').addEventListener('click', function () {
+        var url       = document.getElementById('ad-url').value.trim();
+        var label     = document.getElementById('ad-label').value.trim();
+        var placement = document.getElementById('ad-placement').value;
+        var status    = document.getElementById('ad-status');
+
+        if (!pendingAdImageFile) { status.textContent = 'Please select a banner image first.'; return; }
+
+        status.textContent = 'Uploading…';
+        uploadAdImage()
+        .then(function (imagePath) {
+          return fetch('/api/create-ad', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ image: imagePath, url: url, label: label || 'Advertisement', placement: placement })
+          });
+        })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d.ok) {
+            document.getElementById('ad-url').value   = '';
+            document.getElementById('ad-label').value = '';
+            clearAdImageUI();
+            status.textContent = 'Ad published!';
+            setTimeout(function () { status.textContent = ''; }, 3000);
+            renderAdList();
+          } else {
+            status.textContent = 'Error: ' + (d.error || 'unknown');
+          }
+        })
+        .catch(function () { status.textContent = 'Could not reach server.'; });
+      });
+    }
+
+    function renderAdList() {
+      var list = document.getElementById('ad-list');
+      list.innerHTML = '<div class="empty-state">Loading…</div>';
+      fetch('/api/ads')
+      .then(function (r) { return r.json(); })
+      .then(function (ads) {
+        if (ads.length === 0) { list.innerHTML = '<div class="empty-state">No active ads.</div>'; return; }
+        list.innerHTML = '';
+        ads.forEach(function (ad) {
+          var item = document.createElement('div');
+          item.className = 'article-item';
+          item.innerHTML =
+            '<div class="article-item-info" style="display:flex;gap:14px;align-items:center">' +
+              (ad.image ? '<img src="' + escHtml(ad.image) + '" style="height:50px;width:100px;object-fit:cover;border-radius:2px;flex-shrink:0;border:1px solid #eee">' : '') +
+              '<div>' +
+                '<div class="article-item-headline">' + escHtml(ad.label || 'Advertisement') + '</div>' +
+                (ad.url ? '<div class="article-item-dek">' + escHtml(ad.url) + '</div>' : '') +
+                '<div class="article-item-meta">Placement: ' + escHtml(ad.placement || 'all') + ' &middot; Added ' + escHtml(ad.date || '') + '</div>' +
+              '</div>' +
+            '</div>' +
+            '<button class="btn-delete" data-id="' + escHtml(ad.id) + '">Remove</button>';
+          list.appendChild(item);
+        });
+        list.querySelectorAll('.btn-delete').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            fetch('/api/ads/' + this.getAttribute('data-id') + '?pw=' + encodeURIComponent(currentPw), { method: 'DELETE' })
+            .then(function(r) { return r.json(); })
+            .then(function(d) { if (d.ok) renderAdList(); })
+            .catch(function() {});
+          });
+        });
+      })
+      .catch(function () { list.innerHTML = '<div class="empty-state">Could not load ads.</div>'; });
+    }
+
+    // ── Add button ──
+    function initAddButton() {
+      document.getElementById('btn-add').addEventListener('click', function () {
+        var headline = document.getElementById('f-headline').value.trim();
+        var category = document.getElementById('f-category').value;
+        var dek      = document.getElementById('f-dek').value.trim();
+        var body     = document.getElementById('f-body').value.trim();
+        var status   = document.getElementById('create-status');
+        if (!headline) { document.getElementById('f-headline').focus(); return; }
+
+        var article = {
+          headline: headline, category: category, dek: dek, body: body,
+          seed: Math.floor(Math.random() * 9999),
+          date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+          password: currentPw
+        };
+
+        status.textContent = 'Saving…';
+        uploadImageIfNeeded()
+        .then(function (imagePath) {
+          if (imagePath) article.image = imagePath;
+          return fetch('/api/create-article', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(article)
+          });
+        })
+        .then(function (r) {
+          if (r.status === 403) return r.json().then(function(d) { throw new Error(d.error || 'No publish slots remaining.'); });
+          return r.json();
+        })
+        .then(function (data) {
+          if (data.ok) {
+            document.getElementById('f-headline').value = '';
+            document.getElementById('f-dek').value = '';
+            document.getElementById('f-body').value = '';
+            clearImageUI(
+              document.getElementById('f-image'),
+              document.getElementById('img-preview'),
+              document.getElementById('img-clear'),
+              document.getElementById('img-drop-label')
+            );
+            // Decrement local slot count and refresh subtitle
+            if (!isMasterSession && publishSlots !== null) {
+              publishSlots = Math.max(0, publishSlots - 1);
+              var subtitle = document.getElementById('admin-subtitle');
+              if (subtitle) {
+                subtitle.innerHTML = 'Signed in — <strong>' + escHtml(currentPw) + '</strong> &nbsp;·&nbsp; <strong>' + publishSlots + '</strong> publish slot' + (publishSlots === 1 ? '' : 's') + ' remaining.';
+              }
+            }
+            status.textContent = 'Article created!';
+            setTimeout(function () { status.textContent = ''; }, 3000);
+            renderList();
+          } else {
+            status.textContent = 'Error: ' + (data.error || 'unknown');
+          }
+        })
+        .catch(function (err) { status.textContent = err && err.message ? err.message : 'Could not reach server.'; });
+      });
+    }
+
+    // ── Export articles.json ──
+    function initExportButton() {
+      var btn = document.getElementById('btn-export-articles');
+      if (!btn) return;
+      btn.style.display = 'inline-block';
+      btn.addEventListener('click', function() {
+        fetch('/api/articles?pw=' + encodeURIComponent(currentPw))
+          .then(function(r) { return r.json(); })
+          .then(function(articles) {
+            var blob = new Blob([JSON.stringify(articles, null, 2)], { type: 'application/json' });
+            var a    = document.createElement('a');
+            a.href   = URL.createObjectURL(blob);
+            a.download = 'articles.json';
+            a.click();
+            URL.revokeObjectURL(a.href);
+          })
+          .catch(function() { alert('Could not fetch articles.'); });
+      });
+    }
+
+    // ── Edit Modal ──
+    function openEditModal(slug) {
+      var modal = document.getElementById('edit-modal');
+      document.getElementById('edit-slug').value        = slug;
+      document.getElementById('edit-slug-display').textContent = slug;
+      document.getElementById('edit-headline').value   = '';
+      document.getElementById('edit-category').value   = 'social';
+      document.getElementById('edit-dek').value        = '';
+      document.getElementById('edit-body').value       = '';
+      document.getElementById('edit-image-url').value  = '';
+      document.getElementById('edit-img-preview').style.display = 'none';
+      document.getElementById('edit-img-clear').style.display   = 'none';
+      document.getElementById('edit-img-drop-label').textContent = 'Click or drag image here';
+      document.getElementById('edit-status').textContent = 'Loading…';
+      pendingEditImageFile = null;
+      modal.style.display = 'block';
+
+      fetch('/api/articles/' + slug)
+        .then(function(r) { return r.json(); })
+        .then(function(a) {
+          document.getElementById('edit-headline').value  = a.headline || '';
+          document.getElementById('edit-dek').value       = a.dek      || '';
+          document.getElementById('edit-body').value      = a.body     || '';
+          document.getElementById('edit-image-url').value = a.image    || '';
+          // Set category — fall back to social if value not in dropdown
+          var sel = document.getElementById('edit-category');
+          var cat = a.category || 'social';
+          var matched = false;
+          for (var i = 0; i < sel.options.length; i++) {
+            if (sel.options[i].value === cat) { sel.value = cat; matched = true; break; }
+          }
+          if (!matched) sel.value = 'social';
+          document.getElementById('edit-status').textContent = '';
+        })
+        .catch(function() { document.getElementById('edit-status').textContent = 'Could not load article.'; });
+    }
+
+    function setEditImageFile(file) {
+      pendingEditImageFile = file;
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('edit-img-preview').src          = e.target.result;
+        document.getElementById('edit-img-preview').style.display = 'block';
+        document.getElementById('edit-img-clear').style.display   = 'inline-block';
+        document.getElementById('edit-img-drop-label').textContent = file.name;
+        document.getElementById('edit-image-url').value = ''; // file takes precedence
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function initEditModal() {
+      var modal     = document.getElementById('edit-modal');
+      var dropZone  = document.getElementById('edit-img-drop-zone');
+      var fileInput = document.getElementById('edit-image-file');
+
+      function closeModal() {
+        modal.style.display = 'none';
+        pendingEditImageFile = null;
+      }
+
+      document.getElementById('edit-modal-close').addEventListener('click', closeModal);
+      document.getElementById('edit-cancel-btn').addEventListener('click', closeModal);
+      modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+
+      dropZone.addEventListener('click', function() { fileInput.click(); });
+      dropZone.addEventListener('dragover', function(e) {
+        e.preventDefault(); dropZone.style.borderColor = '#2774AE'; dropZone.style.background = '#f0f6ff';
+      });
+      dropZone.addEventListener('dragleave', function() {
+        dropZone.style.borderColor = '#ccc'; dropZone.style.background = '';
+      });
+      dropZone.addEventListener('drop', function(e) {
+        e.preventDefault(); dropZone.style.borderColor = '#ccc'; dropZone.style.background = '';
+        var f = e.dataTransfer.files[0];
+        if (f && f.type.startsWith('image/')) setEditImageFile(f);
+      });
+      fileInput.addEventListener('change', function() {
+        if (fileInput.files[0]) setEditImageFile(fileInput.files[0]);
+      });
+      document.getElementById('edit-img-clear').addEventListener('click', function() {
+        pendingEditImageFile = null;
+        document.getElementById('edit-img-preview').style.display = 'none';
+        document.getElementById('edit-img-preview').src = '';
+        document.getElementById('edit-img-clear').style.display = 'none';
+        document.getElementById('edit-img-drop-label').textContent = 'Click or drag image here';
+        fileInput.value = '';
+      });
+
+      document.getElementById('edit-save-btn').addEventListener('click', function() {
+        var slug     = document.getElementById('edit-slug').value;
+        var headline = document.getElementById('edit-headline').value.trim();
+        var category = document.getElementById('edit-category').value;
+        var dek      = document.getElementById('edit-dek').value.trim();
+        var body     = document.getElementById('edit-body').value.trim();
+        var imageUrl = document.getElementById('edit-image-url').value.trim();
+        var status   = document.getElementById('edit-status');
+        if (!headline) { document.getElementById('edit-headline').focus(); return; }
+        status.textContent = 'Saving…';
+
+        var imagePromise;
+        if (pendingEditImageFile) {
+          imagePromise = new Promise(function(resolve, reject) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              var base64 = e.target.result.split(',')[1];
+              fetch('/api/upload-image', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ filename: pendingEditImageFile.name, data: base64 })
+              }).then(function(r) { return r.json(); })
+                .then(function(d) { d.ok ? resolve(d.path) : reject(new Error(d.error)); })
+                .catch(reject);
+            };
+            reader.readAsDataURL(pendingEditImageFile);
+          });
+        } else {
+          imagePromise = Promise.resolve(imageUrl);
+        }
+
+        imagePromise.then(function(finalImage) {
+          return fetch('/api/articles/' + slug, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pw: currentPw, headline: headline, category: category, dek: dek, body: body, image: finalImage })
+          });
+        }).then(function(r) { return r.json(); })
+        .then(function(d) {
+          if (d.ok) {
+            status.textContent = 'Saved!';
+            setTimeout(function() { modal.style.display = 'none'; pendingEditImageFile = null; renderList(); }, 700);
+          } else {
+            status.textContent = 'Error: ' + (d.error || 'unknown');
+          }
+        }).catch(function() { status.textContent = 'Could not reach server.'; });
+      });
+    }
+
+  </script>
+  <script>(function(){var el=document.getElementById("topbar-date");if(el){el.textContent=new Date().toLocaleDateString("en-US",{weekday:"long",year:"numeric",month:"long",day:"numeric"});}})()</script>
+</body>
+</html>

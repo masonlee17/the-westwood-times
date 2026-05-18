@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="F9maUCA7kp2gXa68R_6aCkZfH7fpoxXk-KUaOajr_rQ">
+  <link rel="icon" type="image/png" href="images/twt_logo_new.png">
+  <title>The Westwood Times — Clarity in Every Story</title>
+  <meta name="description" content="The Westwood Times covers UCLA and Westwood with independent, accurate reporting on campus life, sports, community, and local news.">
+  <link rel="canonical" href="https://www.thewestwoodtimes.com/">
+  <meta property="og:title" content="The Westwood Times">
+  <meta property="og:description" content="Independent · Accurate · Essential. UCLA and Westwood news.">
+  <meta property="og:image" content="https://www.thewestwoodtimes.com/images/twt_logo_new.png">
+  <meta property="og:url" content="https://www.thewestwoodtimes.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://www.thewestwoodtimes.com/images/twt_logo_new.png">
+  <link rel="stylesheet" href="css/reset.css?v=8">
+  <link rel="stylesheet" href="css/main.css?v=8">
+  <link rel="stylesheet" href="css/ticker.css?v=8">
+  <link rel="stylesheet" href="css/hero.css?v=8">
+  <link rel="stylesheet" href="css/grid.css?v=9">
+  <link rel="stylesheet" href="css/sidebar.css?v=8">
+
+  <style>
+    /* ════════════════════════════════════════
+       V2 DESIGN OVERRIDES
+       These layer on top of the existing CSS.
+       Approve what you like → port to the real files.
+    ════════════════════════════════════════ */
+
+    /* 1. Modern font — system-ui renders as SF Pro on Mac/iOS,
+          Segoe UI on Windows. Feels native, no external requests. */
+    :root {
+      --font: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+
+    /* 2. Category tags — pill shape instead of sharp rectangles */
+    .category-tag {
+      border-radius: 20px;
+      font-size: 10px;
+      padding: 3px 10px;
+    }
+
+    /* 3. Images — soft rounding on all card image wrappers */
+    .row-card .img-wrap,
+    .featured-card .img-wrap,
+    .side-card .img-wrap,
+    .opinion-card .img-wrap,
+    .fslider-img-wrap,
+    .hero-bottom-card .img-wrap {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .hero-secondary-card img {
+      border-radius: 6px;
+    }
+    .hero-img {
+      border-radius: 6px;
+    }
+
+    /* 4. Card highlight on hover — scale up + background tint, no shadow/border */
+    .row-card {
+      border-radius: 8px;
+      transition: transform 0.2s ease, background 0.2s ease;
+      padding: 6px;
+    }
+    .row-card:hover {
+      transform: scale(1.04);
+      background: #eef2f8;
+      box-shadow: none;
+    }
+
+    /* 4b. Padding so scaled cards don't clip at left/right edge of scroll container */
+    .row-grid {
+      padding: 10px 12px 14px;
+    }
+
+    /* 5. Section rows — no more alternating grey/white.
+          Each section stands on its own with breathing room. */
+    .story-row {
+      background: var(--surface) !important;
+      padding: 36px 0 40px;
+      border-bottom: 1px solid var(--border-light) !important;
+    }
+
+    /* 6. Section accent colors — left bar matches the category.
+          Makes each section feel like its own destination. */
+    #section-social    .row-title::before { background: #8B2FC9; }
+    #section-village   .row-title::before { background: #B5601E; }
+    #section-sports    .row-title::before { background: #2774AE; }
+    #section-community .row-title::before { background: #1a8070; }
+    #section-clubs     .row-title::before { background: #C88B14; }
+    #section-hill      .row-title::before { background: #1e4d8c; }
+
+    /* 7. Section title — less aggressive, more editorial */
+    .row-title {
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: none;
+      font-weight: 800;
+    }
+
+    /* 8. "More →" link — pill button instead of plain text */
+    .row-more {
+      font-size: 11px;
+      color: var(--blue);
+      border: 1.5px solid var(--blue);
+      padding: 5px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.02em;
+      transition: background 0.15s, color 0.15s;
+      text-transform: none;
+    }
+    .row-more:hover {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    /* 9. Trending numbers — crisp blue instead of huge faint gray */
+    .trending-num {
+      font-size: 11px;
+      font-weight: 900;
+      color: #fff;
+      background: var(--blue);
+      min-width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      letter-spacing: 0;
+    }
+
+    /* 10. Trending items — tighter, cleaner */
+    .trending-item {
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    /* 11. Nav — less aggressive tracking */
+    .nav-tab {
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: none;
+      font-weight: 700;
+    }
+    .topbar-tagline {
+      letter-spacing: 0.05em;
+    }
+
+    /* 12. Mode buttons (Reels / Sales) inside primary nav */
+    .nav-mode-sep {
+      width: 1px;
+      height: 14px;
+      background: rgba(255,255,255,0.2);
+      align-self: center;
+      margin: 0 6px;
+      flex-shrink: 0;
+    }
+    .mode-tab {
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: none;
+      color: rgba(255,255,255,0.5);
+      padding: 0 14px;
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .mode-tab:hover { color: rgba(255,255,255,0.9); }
+    .mode-tab.active { color: #fff; border-bottom-color: #2774AE; }
+
+    /* 13. Featured slider cards — wider, more visual weight */
+    .fslider-card {
+      width: 300px;
+      border-radius: 10px;
+    }
+    .fslider-track { gap: 20px; }
+
+    /* 14. Hero headline — slightly bigger presence */
+    .hero-headline {
+      font-size: 30px;
+    }
+
+    /* 15. Opinion author — blue instead of grey, more intentional */
+    .opinion-author {
+      color: var(--blue);
+      font-size: 11px;
+      font-style: italic;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    /* 16. Share buttons on article pages — pill shape */
+    .share-btn {
+      border-radius: 20px;
+      padding: 5px 14px;
+    }
+
+    /* 17. Tag pills — rounder */
+    .tag-pill {
+      border-radius: 20px;
+      padding: 4px 12px;
+    }
+
+    /* 18. Read-time badge — injected via JS */
+    .v2-read-time {
+      display: inline-block;
+      font-size: 10px;
+      color: var(--text-faint);
+      margin-top: 5px;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+
+    /* 19. Main grid section — remove harsh border */
+    .main-grid-section {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    /* 20. Side card images — rounder */
+    .side-card img { border-radius: 4px; }
+    .side-card .img-wrap { border-radius: 4px; }
+
+    /* Reels */
+    #reels-mode {
+      height: calc(100vh - var(--topbar-h) - var(--header-h) - var(--ticker-h));
+      overflow: hidden;
+      background: #000;
+    }
+    @media (max-width: 1024px) {
+      #reels-mode { height: calc(100vh - var(--header-h) - var(--ticker-h)); }
+    }
+    #reels-container {
+      height: 100%;
+      overflow: hidden;
+    }
+    #reels-track {
+      will-change: transform;
+    }
+    .reel-card {
+      height: calc(100vh - var(--topbar-h) - var(--header-h) - var(--ticker-h));
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    @media (max-width: 1024px) {
+      .reel-card { height: calc(100vh - var(--header-h) - var(--ticker-h)); }
+    }
+    .reel-card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .reel-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0.05) 100%); }
+    .reel-card-content { position: relative; z-index: 2; padding: 0 40px 44px; max-width: 760px; }
+    @media (max-width: 600px) { .reel-card-content { padding: 0 22px 32px; } }
+    .reel-card-category { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #cc0000; background: rgba(255,255,255,0.95); padding: 3px 9px; border-radius: 20px; margin-bottom: 14px; }
+    .reel-card-headline { font-size: clamp(24px, 3.5vw, 40px); font-weight: 900; color: #fff; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 22px; }
+    .reel-read-btn { display: inline-block; background: #cc0000; color: #fff; text-decoration: none; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 11px 26px; border-radius: 20px; transition: background 0.15s; }
+    .reel-read-btn:hover { background: #aa0000; }
+    .reel-nav { position: fixed; right: 24px; bottom: 48px; display: flex; flex-direction: column; gap: 10px; z-index: 200; }
+    .reel-nav-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.45); backdrop-filter: blur(6px); color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.15s; }
+    .reel-nav-btn:hover { background: rgba(0,0,0,0.7); }
+    .reel-loading, .reel-empty { color: rgba(255,255,255,0.5); text-align: center; padding: 80px 20px; font-size: 15px; }
+
+    /* Sales */
+    #sales-mode { background: var(--surface, #fafaf9); padding: 64px 20px 80px; border-top: 1px solid var(--border-light, #e8e8e8); }
+    .sales-inner { max-width: 980px; margin: 0 auto; }
+    .sales-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 0.05em; text-transform: none; color: #2774AE; margin-bottom: 16px; }
+    .sales-heading { font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: #111; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .sales-sub { font-size: 16px; color: #666; line-height: 1.65; max-width: 560px; margin-bottom: 56px; }
+    .sales-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 56px; }
+    @media (max-width: 860px) { .sales-grid { grid-template-columns: 1fr; } }
+    .sales-card { border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; background: #fff; transition: border-color 0.2s, box-shadow 0.2s; }
+    .sales-card:hover { border-color: #2774AE; box-shadow: 0 4px 16px rgba(39,116,174,0.10); }
+    .sales-card.featured { border-color: #2774AE; }
+    .sales-card-top { padding: 28px 28px 22px; border-bottom: 1px solid #f0f0f0; }
+    .sales-card.featured .sales-card-top { background: #2774AE; }
+    .sales-card-label { font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: none; color: #999; margin-bottom: 10px; }
+    .sales-card.featured .sales-card-label { color: rgba(255,255,255,0.8); }
+    .sales-card-name { font-size: 22px; font-weight: 900; color: #111; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .sales-card.featured .sales-card-name { color: #fff; }
+    .sales-price-row { display: flex; align-items: baseline; gap: 4px; }
+    .sales-price-dollar { font-size: 38px; font-weight: 900; color: #111; line-height: 1; }
+    .sales-card.featured .sales-price-dollar { color: #fff; }
+    .sales-price-period { font-size: 13px; color: #999; font-weight: 500; }
+    .sales-card.featured .sales-price-period { color: rgba(255,255,255,0.7); }
+    .sales-card-body { padding: 24px 28px 28px; flex: 1; display: flex; flex-direction: column; }
+    .sales-card-desc { font-size: 14px; color: #555; line-height: 1.65; margin-bottom: 20px; }
+    .sales-feature-list { list-style: none; flex: 1; margin-bottom: 28px; }
+    .sales-feature-list li { font-size: 13px; color: #444; padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 10px; }
+    .sales-feature-list li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #2774AE; flex-shrink: 0; }
+    .sales-cta-btn { display: inline-block; background: #f0f4f9; color: #2774AE; text-decoration: none; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 12px 24px; border-radius: 20px; text-align: center; transition: background 0.15s, color 0.15s; border: 1.5px solid #2774AE; }
+    .sales-cta-btn:hover { background: #2774AE; color: #fff; }
+    .sales-card.featured .sales-cta-btn { background: #fff; color: #2774AE; border-color: #fff; }
+    .sales-card.featured .sales-cta-btn:hover { background: rgba(255,255,255,0.88); }
+    .sales-contact { border: 1px solid #e0e0e0; border-radius: 10px; padding: 40px; text-align: center; background: #fff; }
+    .sales-contact h3 { font-size: 22px; font-weight: 900; color: #111; margin-bottom: 10px; }
+    .sales-contact p { font-size: 14px; color: #666; line-height: 1.6; max-width: 460px; margin: 0 auto 24px; }
+    .sales-email-btn { display: inline-flex; align-items: center; gap: 10px; background: #2774AE; color: #fff; font-size: 13px; font-weight: 700; text-decoration: none; padding: 13px 28px; border-radius: 20px; transition: background 0.15s; }
+    .sales-email-btn:hover { background: #1e5c8c; }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div id="top-bar">
+    <div class="topbar-inner">
+      <span class="topbar-date" id="topbar-date"></span>
+      <span class="topbar-tagline">Independent &middot; Accurate &middot; Essential</span>
+      <div class="topbar-links">
+        <a href="subscribe.html">Subscribe</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="site-header" role="banner">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo-link" aria-label="The Westwood Times home">
+        <img src="images/twt_logo_new.png" alt="The Westwood Times" class="site-logo">
+      </a>
+      <nav class="primary-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#section-social" class="nav-tab active" data-section="social">Social</a></li>
+          <li><a href="#section-village" class="nav-tab" data-section="village">Village News</a></li>
+          <li><a href="#section-sports" class="nav-tab" data-section="sports">Sports</a></li>
+          <li><a href="#section-community" class="nav-tab" data-section="community">Community</a></li>
+          <li><a href="#section-clubs" class="nav-tab" data-section="clubs">Clubs</a></li>
+          <li><a href="#section-hill" class="nav-tab" data-section="hill">Hill</a></li>
+          <li class="nav-mode-sep" aria-hidden="true"></li>
+          <li><button class="mode-tab" data-mode="reels" aria-pressed="false">Reels</button></li>
+          <li><button class="mode-tab" data-mode="sales" aria-pressed="false">Sales</button></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="search-btn" id="search-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+          </svg>
+        </button>
+        <a href="subscribe.html" class="live-tv-btn">Subscribe</a>
+      </div>
+    </div>
+    <nav class="mobile-nav-drawer" id="mobile-nav-drawer" role="navigation" aria-label="Mobile">
+      <ul>
+        <li><a href="#section-social" data-section="social">Social</a></li>
+        <li><a href="#section-village" data-section="village">Village News</a></li>
+        <li><a href="#section-sports" data-section="sports">Sports</a></li>
+        <li><a href="#section-community" data-section="community">Community</a></li>
+        <li><a href="#section-clubs" data-section="clubs">Clubs</a></li>
+        <li><a href="#section-hill" data-section="hill">Hill</a></li>
+        <li><button class="mode-tab" data-mode="reels">Reels</button></li>
+      </ul>
+    </nav>
+    <div class="search-overlay" id="search-overlay" role="search" aria-hidden="true">
+      <form>
+        <input type="search" class="search-input" placeholder="Search The Westwood Times…" autocomplete="off" aria-label="Search">
+        <button type="button" class="search-close" id="search-close" aria-label="Close search">&#x2715;</button>
+      </form>
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </header>
+
+  <div id="articles-mode">
+
+  <!-- TICKER -->
+  <div class="breaking-ticker" id="breaking-ticker" aria-live="polite">
+    <span class="ticker-label">Community</span>
+    <div class="ticker-track-wrapper">
+      <div class="ticker-track">
+        <span class="ticker-item">UCLA women's basketball advances to first-ever national championship game, defeating Texas 51-44 in Phoenix</span>
+        <span class="ticker-sep">|</span>
+        <span class="ticker-item">Jordan Chiles posts a perfect 10 on floor as UCLA gymnastics wins NCAA Regional in Corvallis</span>
+        <span class="ticker-sep">|</span>
+        <span class="ticker-item">Westwood Village Theatre announces 2027 reopening with American Cinematheque as programming partner</span>
+        <span class="ticker-sep">|</span>
+        <span class="ticker-item">USAC fee referendums cleared for May ballot; students urged to review proposed increases before voting</span>
+        <span class="ticker-sep">|</span>
+        <span class="ticker-item">Broxton parking structure eliminates two-hour free window; local businesses seek city exemption</span>
+        <span class="ticker-sep">|</span>
+        <span class="ticker-item">Bob Chesney opens spring football practices as Bruins look to rebuild following historically troubled 2025 season</span>
+        <span class="ticker-sep">|</span>
+        <span class="ticker-item">UCLA housing confirms triple-room policy continues for 2026-27 as on-campus demand outpaces capacity</span>
+        <span class="ticker-sep">|</span>
+        <span class="ticker-item">UC academic workers ratify new contract after strike threat; TAs win up to 45% wage increase</span>
+        <span class="ticker-sep">|</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED SLIDER -->
+  <section id="featured-slider-section" style="display:none" aria-label="Featured stories">
+    <div class="fslider-header container">
+      <span class="fslider-label">Editor's Pick</span>
+    </div>
+    <div class="fslider-track-wrap">
+      <div class="fslider-track" id="featured-slider-track"></div>
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <section class="hero-section" aria-label="Top stories">
+    <div class="hero-inner">
+      <a href="womens-basketball-championship.html" class="hero-primary">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Pauley_Pavilion_crowd.jpg" alt="UCLA women's basketball team celebrating on court" class="hero-img">
+        <div class="hero-overlay">
+          <span class="category-tag tag-sports">Sports</span>
+          <h1 class="hero-headline">Bruins make history: UCLA women's basketball reaches its first national championship game after defeating Texas in Phoenix</h1>
+          <p class="hero-dek">Lauren Betts posted a double-double and Kiki Rice iced the victory at the free-throw line as the Bruins outlasted the Longhorns 51-44 to earn a date with South Carolina on Sunday.</p>
+        </div>
+      </a>
+      <div class="hero-divider-v" aria-hidden="true"></div>
+      <div class="hero-secondary">
+        <a href="village-theatre-reopening.html" class="hero-secondary-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Highsmithwestwoodvillagetheater.jpg" alt="Westwood Village Theatre marquee">
+          <div class="card-body">
+            <span class="category-tag tag-village">Village News</span>
+            <h2 class="card-headline">Westwood Village Theatre to reopen in 2027 under American Cinematheque partnership</h2>
+          </div>
+        </a>
+        <a href="jordan-chiles-perfect-ten.html" class="hero-secondary-card">
+          <img src="resize.webp" alt="Jordan Chiles on the gymnastics floor">
+          <div class="card-body">
+            <span class="category-tag tag-sports">Sports</span>
+            <h2 class="card-headline">Jordan Chiles lands a perfect 10 to send UCLA gymnastics to the NCAA Regional Final</h2>
+          </div>
+        </a>
+        <a href="triple-room-crisis.html" class="hero-secondary-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Hedrick_Hall_UCLA_2015.4.jpg" alt="UCLA residence halls on the Hill">
+          <div class="card-body">
+            <span class="category-tag tag-hill">Hill</span>
+            <h2 class="card-headline">Triple rooms become the new normal as UCLA's housing guarantee strains on-campus capacity</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN GRID -->
+  <section class="main-grid-section">
+    <div class="container">
+      <div class="main-grid">
+        <article class="featured-card">
+          <a href="ucla-425-million-deficit.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Royce_Hall_-_Front_View.jpg" alt="Royce Hall at UCLA">
+            <div class="card-body">
+              <span class="category-tag tag-community">Community</span>
+              <h2 class="featured-headline">UCLA's $425 million deficit casts a long shadow over student services, staffing, and the programs students rely on most</h2>
+              <p class="card-dek">After the university's CFO was removed days after disclosing a near-billion-dollar two-year shortfall, students and staff are left wondering what comes next for a campus already navigating federal funding threats and DEI rollbacks.</p>
+            </div>
+          </a>
+        </article>
+        <div class="side-cards">
+          <article class="side-card">
+            <a href="kappa-sigma-suspension.html">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Fraternity_men_wearing_t-shirts_with_Greek_letters_sitting_in_front_of_University_of_Texas_at_Arlington_sign_%2810005982%29.jpg" alt="">
+              <div class="card-body">
+                <span class="category-tag tag-social">Social</span>
+                <h3 class="card-headline">Kappa Sigma suspended until 2030, but UCLA's conduct process keeps students in the dark</h3>
+              </div>
+            </a>
+          </article>
+          <article class="side-card">
+            <a href="spring-clubs-fair.html">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Janss_Steps%2C_Royce_Hall_in_background%2C_UCLA.jpg" alt="">
+              <div class="card-body">
+                <span class="category-tag tag-clubs">Clubs</span>
+                <h3 class="card-headline">Spring clubs fair on Bruin Walk draws record turnout as over 1,300 orgs compete for new members</h3>
+              </div>
+            </a>
+          </article>
+          <article class="side-card">
+            <a href="usac-judicial-board.html">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Kerckhoff_Hall%2C_UCLA_%282007%29.jpg" alt="">
+              <div class="card-body">
+                <span class="category-tag tag-clubs">Clubs</span>
+                <h3 class="card-headline">USAC's Judicial Board stripped of meaningful oversight as stipends slashed for the second year in a row</h3>
+              </div>
+            </a>
+          </article>
+          <article class="side-card">
+            <a href="broxton-parking.html">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Westwood_Village%2C_Los_Angeles%2C_California_%283124966155%29.jpg" alt="">
+              <div class="card-body">
+                <span class="category-tag tag-village">Village News</span>
+                <h3 class="card-headline">Broxton parking ends 25-year free window, drawing outcry from businesses and regular visitors alike</h3>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-slot" id="ad-slot-main" aria-label="Advertisement"></div>
+
+  <!-- SOCIAL -->
+  <section class="story-row" id="section-social" aria-labelledby="social-heading">
+    <div class="container">
+      <div class="row-header">
+        <h2 class="row-title" id="social-heading"><span class="row-accent">Social</span></h2>
+        <a href="#" class="row-more">More Social &#8250;</a>
+      </div>
+      <div class="row-grid">
+        <article class="row-card">
+          <a href="kappa-sigma-suspension.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Fraternity_men_wearing_t-shirts_with_Greek_letters_sitting_in_front_of_University_of_Texas_at_Arlington_sign_%2810005982%29.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-social">Social</span>
+              <h3 class="card-headline">Kappa Sigma suspended until 2030 in near-total secrecy, fueling student distrust of Greek conduct process</h3>
+              <p class="card-dek">University officials declined to disclose specific violations, citing conduct code confidentiality rules that many students argue protect institutions more than students.</p>
+              <span class="v2-read-time">4 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="greek-life-report.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Delta_Gamma_Sorority_House%2C_University_of_Oregon%2C_Eugene_-_DPLA_-_4e5c47456915bca09731cbdbe2ec6e16.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-social">Social</span>
+              <h3 class="card-headline">UCLA's annual Greek Life Community Report grades chapters on GPA, philanthropy hours, and safety records</h3>
+              <p class="card-dek">The report, covering all 60 Greek-letter organizations, found wide variance in academic performance and community engagement across the four inter/national councils.</p>
+              <span class="v2-read-time">5 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="thursday-nights.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Bruin_Theatre%2C_Westwood%2C_Los_Angeles%2C_CA_%2C_at_night.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-social">Social</span>
+              <h3 class="card-headline">How Thursday nights became the unofficial anchor of UCLA's social calendar</h3>
+              <p class="card-dek">Without a traditional Greek Row, UCLA's social scene clusters around Thursday, when off-campus apartments and Westwood corridors come alive in ways that look different from most Pac-12 campuses.</p>
+              <span class="v2-read-time">6 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="ryans-weekly-mashup-1.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/4/40/The_Emoji_Movie_premiere_at_the_Fox_Theatre%2C_Westwood_Village_4.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-social">Social</span>
+              <h3 class="card-headline">Ryan's Weekly Mashup: Edition 1 — Jameson's Thursday, ZBT Friday, and an exclusive Prime Video screening Sunday</h3>
+              <p class="card-dek">The inaugural edition of the Westwood social calendar you didn't know you needed. Three events, three days, zero excuses.</p>
+              <span class="v2-read-time">3 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="balls-up-screening-recap.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Whose_Streets%3F_A_Social_Cinema_Screening_%2835731793401%29.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-social">Social</span>
+              <h3 class="card-headline">The Balls Up screening at Mark 703 was everything the invite promised</h3>
+              <p class="card-dek">Amazon Prime Video's advance screening brought around 50 students to a Westwood apartment Sunday afternoon — the merch table was stocked and the film delivered.</p>
+              <span class="v2-read-time">2 min read</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VILLAGE NEWS -->
+  <section class="story-row" id="section-village" aria-labelledby="village-heading">
+    <div class="container">
+      <div class="row-header">
+        <h2 class="row-title" id="village-heading"><span class="row-accent">Village News</span></h2>
+        <a href="#" class="row-more">More Village News &#8250;</a>
+      </div>
+      <div class="row-grid">
+        <article class="row-card">
+          <a href="village-theatre-reopening.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Highsmithwestwoodvillagetheater.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-village">Village News</span>
+              <h3 class="card-headline">Westwood Village Theatre to reopen in 2027, ending a three-year closure with a $25 million restoration</h3>
+              <p class="card-dek">The American Cinematheque will program the revived theater, bringing awards-season screenings, filmmaker Q&amp;As, and film festivals back to Broxton Avenue.</p>
+              <span class="v2-read-time">4 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="broxton-parking.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Westwood_Village%2C_Los_Angeles%2C_California_%283124966155%29.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-village">Village News</span>
+              <h3 class="card-headline">Broxton parking structure ends its 25-year free window, charging $2 per 20 minutes starting this August</h3>
+              <p class="card-dek">The change, part of an LADOT citywide initiative, has alarmed local business owners who say reduced foot traffic is already being felt on weekday afternoons.</p>
+              <span class="v2-read-time">5 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="westwood-new-restaurants.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Looking_Up_Westwood_Blvd._from_Westside_Pavillion.JPG" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-village">Village News</span>
+              <h3 class="card-headline">Bread Head and Sana'a Cafe signal a new culinary wave arriving on Westwood Boulevard this year</h3>
+              <p class="card-dek">The Michelin-pedigreed focaccia shop and a Yemeni coffee house are among several new tenants reshaping the dining corridor between Wilshire and Le Conte.</p>
+              <span class="v2-read-time">4 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="westwood-development.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Wilshire_Blvd_from_Hammer_Museum_20250619_123605.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-village">Village News</span>
+              <h3 class="card-headline">$300 million in committed development projects signals a turning point for Westwood Village's commercial future</h3>
+              <p class="card-dek">A November report urging the Village to expand its appeal beyond students appears to be gaining traction, with office, retail, and hotel projects now under construction or in permitting.</p>
+              <span class="v2-read-time">5 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="raising-canes-westwood.html">
+            <div class="img-wrap"><img src="images/canes.png" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-village">Village News</span>
+              <h3 class="card-headline">Raising Cane's is coming to Westwood Village, adding a long-requested chain to a dining corridor in the middle of a commercial revival</h3>
+              <p class="card-dek">The Louisiana-based chain has signed a lease on Broxton Avenue and is targeting a late-2026 opening, giving UCLA students one fewer reason to leave Westwood for a specific craving.</p>
+              <span class="v2-read-time">3 min read</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPORTS -->
+  <section class="story-row" id="section-sports" aria-labelledby="sports-heading">
+    <div class="container">
+      <div class="row-header">
+        <h2 class="row-title" id="sports-heading"><span class="row-accent">Sports</span></h2>
+        <a href="#" class="row-more">More Sports &#8250;</a>
+      </div>
+      <div class="row-grid">
+        <article class="row-card">
+          <a href="womens-basketball-championship.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Pauley_Pavilion_crowd.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-sports">Sports</span>
+              <h3 class="card-headline">Bruins reach the national championship for the first time, set to face South Carolina Sunday in Phoenix</h3>
+              <p class="card-dek">Cori Close's team has won 11 straight since February, with Lauren Betts averaging a double-double over the tournament's first four rounds.</p>
+              <span class="v2-read-time">5 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="jordan-chiles-perfect-ten.html">
+            <div class="img-wrap"><img src="resize.webp" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-sports">Sports</span>
+              <h3 class="card-headline">Jordan Chiles earns a perfect 10 on floor to pace UCLA gymnastics to first place at NCAA Regionals in Corvallis</h3>
+              <p class="card-dek">The Olympic gold medalist and Big Ten Gymnast of the Year delivered the program's most-watched floor routine of the season.</p>
+              <span class="v2-read-time">4 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="bob-chesney-football.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Rose_Bowl%2C_panorama.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-sports">Sports</span>
+              <h3 class="card-headline">Bob Chesney takes command of a football program in crisis, bringing a 132-win record and eight conference titles from James Madison</h3>
+              <p class="card-dek">The new head coach began spring practices this week, with quarterback Nico Iamaleava confirmed as a returning starter and a full staff overhaul underway.</p>
+              <span class="v2-read-time">6 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="mens-basketball-uconn.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/PauleyPavilionExterior.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-sports">Sports</span>
+              <h3 class="card-headline">Men's basketball falls to UConn in the NCAA Tournament's second round, closing out a resilient 24-12 season</h3>
+              <p class="card-dek">Mick Cronin's Bruins won the Big Ten Tournament opener before bowing out in March, leaving questions about roster depth heading into a pivotal recruiting window.</p>
+              <span class="v2-read-time">4 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="ucla-baseball-2026.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/JackieRobinsonStadium.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-sports">Sports</span>
+              <h3 class="card-headline">No. 1 UCLA baseball is 27-2, riding a 21-game win streak, and one victory from program history</h3>
+              <p class="card-dek">Roch Cholowsky is the projected No. 1 draft pick in the country. Wylan Moss has a 0.35 ERA. The Bruins are undefeated in Big Ten play and just beat USC 12-4 in the rivalry opener.</p>
+              <span class="v2-read-time">4 min read</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="story-row" id="section-community" aria-labelledby="community-heading">
+    <div class="container">
+      <div class="row-header">
+        <h2 class="row-title" id="community-heading"><span class="row-accent">Community</span></h2>
+        <a href="#" class="row-more">More Community &#8250;</a>
+      </div>
+      <div class="row-grid">
+        <article class="row-card">
+          <a href="ucla-425-million-deficit.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Royce_Hall_-_Front_View.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-community">Community</span>
+              <h3 class="card-headline">UCLA's $425 million annual deficit raises urgent questions about cuts to student services and support programs</h3>
+              <p class="card-dek">Chancellor Frenk removed CFO Stephen Agostini days after the disclosure, leaving the university without a clear financial road map as federal funding threats compound the pressure.</p>
+              <span class="v2-read-time">7 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="dei-crackdown-ucla.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/5/52/UCLA_FJP_2024.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-community">Community</span>
+              <h3 class="card-headline">Federal DEI crackdown forces UCLA to scrub program language and lay off five access and retention directors</h3>
+              <p class="card-dek">Campus attorneys advised equity advisors this spring to remove language from websites that could be read as implying preferential treatment.</p>
+              <span class="v2-read-time">6 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="uc-worker-contract.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Strikers_at_UCLA.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-community">Community</span>
+              <h3 class="card-headline">UC academic workers ratify new contract after a last-chance picket draws 300 to campus; TAs win up to 45% wage increase</h3>
+              <p class="card-dek">Three UAW units representing 40,000 workers reached a tentative agreement the day after the March 12 rally.</p>
+              <span class="v2-read-time">5 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="bruin-volunteer-day.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Parkdale_Community_garden_volunteer_day.JPG" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-community">Community</span>
+              <h3 class="card-headline">Bruin Volunteer Day deploys over 1,000 students to food banks, shelters, and schools across Los Angeles</h3>
+              <p class="card-dek">The UCLA Volunteer Center's flagship event sent students to more than 40 partner sites last fall.</p>
+              <span class="v2-read-time">3 min read</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLUBS -->
+  <section class="story-row" id="section-clubs" aria-labelledby="clubs-heading">
+    <div class="container">
+      <div class="row-header">
+        <h2 class="row-title" id="clubs-heading"><span class="row-accent">Clubs</span></h2>
+        <a href="#" class="row-more">More Clubs &#8250;</a>
+      </div>
+      <div class="row-grid">
+        <article class="row-card">
+          <a href="usac-fee-referendum.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Ackerman_Student_Union%2C_UCLA.png" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-clubs">Clubs</span>
+              <h3 class="card-headline">USAC passes fee referendums for the May ballot, but an Elections Board investigation clouds the outcome</h3>
+              <p class="card-dek">The "Bruin Success Referendum" is under review for alleged improper advocacy before the official campaigning window opened.</p>
+              <span class="v2-read-time">5 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="transfer-students-usac.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/2019_UCLA_Royce_Hall_arcade.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-clubs">Clubs</span>
+              <h3 class="card-headline">Transfer students make up a quarter of UCLA's undergrads but remain structurally shut out of student government</h3>
+              <p class="card-dek">Early filing deadlines and limited outreach from USAC have kept transfer voices off the council for years.</p>
+              <span class="v2-read-time">5 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="devx-student-tech.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Boelter_Hall%2C_UCLA.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-clubs">Clubs</span>
+              <h3 class="card-headline">Inside DevX: the student-run tech incubator turning Bruin Walk ideas into products that actually ship</h3>
+              <p class="card-dek">Now in its fourth year, DevX has produced more than a dozen live applications, with alumni placing at Google, Stripe, and Y Combinator-backed startups.</p>
+              <span class="v2-read-time">6 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="usac-judicial-board.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Kerckhoff_Hall%2C_UCLA_%282007%29.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-clubs">Clubs</span>
+              <h3 class="card-headline">USAC's Judicial Board is being hollowed out — and student government's own accountability is paying the price</h3>
+              <p class="card-dek">The body that rules on USAC's internal disputes now pays its chief justice $750 a year after two consecutive rounds of stipend cuts drew little public debate from the council.</p>
+              <span class="v2-read-time">5 min read</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HILL -->
+  <section class="story-row" id="section-hill" aria-labelledby="hill-heading">
+    <div class="container">
+      <div class="row-header">
+        <h2 class="row-title" id="hill-heading"><span class="row-accent">Hill</span></h2>
+        <a href="#" class="row-more">More Hill &#8250;</a>
+      </div>
+      <div class="row-grid">
+        <article class="row-card">
+          <a href="triple-room-crisis.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/UCLA_dorm_room.JPG" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-hill">Hill</span>
+              <h3 class="card-headline">Triple rooms are now the norm on the Hill, and residents say the squeeze is affecting more than just storage space</h3>
+              <p class="card-dek">UCLA converted most double-occupancy rooms to triples this year to honor its four-year housing guarantee, and students report that studying, sleeping, and socializing have all grown harder.</p>
+              <span class="v2-read-time">6 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="classic-halls-guide.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Hedrick_Hall_UCLA_2015.4.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-hill">Hill</span>
+              <h3 class="card-headline">Rieber, Hedrick, Sproul, Dykstra: the definitive guide to life in UCLA's four Classic Residence Halls</h3>
+              <p class="card-dek">Each of the four Classic Halls has a distinct personality, a different relationship to campus dining, and a Living Learning Community that attracts students with specific academic and social interests.</p>
+              <span class="v2-read-time">7 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="reslife-spring-programming.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Inverted_Fountain%2C_UCLA.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-hill">Hill</span>
+              <h3 class="card-headline">ResLife Programming Board unveils a spring slate of events designed to help Hill residents recover from midterm burnout</h3>
+              <p class="card-dek">From free massage nights in Hedrick to a Ropes Course trip at Sunset Rec, the board's spring calendar leans into wellness programming.</p>
+              <span class="v2-read-time">4 min read</span>
+            </div>
+          </a>
+        </article>
+        <article class="row-card">
+          <a href="housing-guarantee-four-years.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Rieber_Court_UCLA.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-hill">Hill</span>
+              <h3 class="card-headline">Four years after UCLA launched its housing guarantee, the question is no longer whether it works but whether it works well</h3>
+              <p class="card-dek">The guarantee made UCLA the only UC to promise four years of on-campus housing, but critics say the tradeoffs are straining the policy's original promise.</p>
+              <span class="v2-read-time">7 min read</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRENDING + NEWSLETTER -->
+  <section class="trending-live-row" aria-label="Trending">
+    <div class="container">
+      <div class="trending-live-grid">
+        <div class="trending-block">
+          <h2 class="block-title">Trending</h2>
+          <ol class="trending-list">
+            <li class="trending-item">
+              <span class="trending-num">1</span>
+              <a href="womens-basketball-championship.html">UCLA women's basketball reaches first-ever national championship game after defeating Texas in Phoenix</a>
+            </li>
+            <li class="trending-item">
+              <span class="trending-num">2</span>
+              <a href="jordan-chiles-perfect-ten.html">Jordan Chiles lands a perfect 10 to send UCLA gymnastics to the NCAA Regional Final</a>
+            </li>
+            <li class="trending-item">
+              <span class="trending-num">3</span>
+              <a href="triple-room-crisis.html">Triple rooms are now the norm on the Hill — and students say the squeeze goes beyond storage</a>
+            </li>
+            <li class="trending-item">
+              <span class="trending-num">4</span>
+              <a href="village-theatre-reopening.html">Westwood Village Theatre set to reopen in 2027 after a $25 million restoration</a>
+            </li>
+            <li class="trending-item">
+              <span class="trending-num">5</span>
+              <a href="ucla-425-million-deficit.html">UCLA's $425 million deficit: what it means for students, programs, and the university's future</a>
+            </li>
+          </ol>
+        </div>
+        <div class="live-tv-block">
+          <h2 class="block-title">Newsletter</h2>
+          <div class="live-tv-player" style="margin-bottom:14px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Royce_Hall_-_Front_View.jpg" alt="Royce Hall at UCLA" class="live-tv-thumb" style="border-radius:6px">
+          </div>
+          <p class="live-description">The week's top stories from UCLA and Westwood — delivered to your inbox every Friday morning. Independent. Free. Always.</p>
+          <a href="newsletter.html" class="live-watch-btn">Subscribe Free</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINION -->
+  <section class="opinion-row" aria-labelledby="opinion-heading">
+    <div class="container">
+      <div class="row-header">
+        <h2 class="row-title" id="opinion-heading"><span class="row-accent">Opinion</span></h2>
+        <a href="#" class="row-more">More Opinion &#8250;</a>
+      </div>
+      <div class="opinion-grid">
+        <article class="opinion-card">
+          <a href="opinion-greek-transparency.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Phi_Gamma_Delta_Fraternity_house_exterior_near_the_University_of_Washington%2C_showing_young_men_outside_entrance%2C_Seattle%2C_1904_%28WARNER_249%29.jpeg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-opinion">Opinion</span>
+              <h3 class="card-headline">UCLA's conduct code protects institutions. It should protect students instead.</h3>
+              <p class="opinion-author">By Priya Anand-Cho, '26</p>
+            </div>
+          </a>
+        </article>
+        <article class="opinion-card">
+          <a href="opinion-housing-guarantee.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Westwood_Village%2C_California_%2874439%29.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-opinion">Opinion</span>
+              <h3 class="card-headline">A housing guarantee that packs three people into a room built for two is not a guarantee worth celebrating</h3>
+              <p class="opinion-author">By Marcus T. Webb, '27</p>
+            </div>
+          </a>
+        </article>
+        <article class="opinion-card">
+          <a href="opinion-westwood-parking.html">
+            <div class="img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Westwood_Blvd_from_Hammer_Museum_20250619_123147.jpg" alt=""></div>
+            <div class="card-body">
+              <span class="category-tag tag-opinion">Opinion</span>
+              <h3 class="card-headline">Charging for parking on Broxton may be good policy. It still deserved a better process than this.</h3>
+              <p class="opinion-author">By Simone Hargrove, '25</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /#articles-mode -->
+
+  <!-- REELS MODE -->
+  <div id="reels-mode" style="display:none">
+    <div id="reels-container"></div>
+  </div>
+
+  <!-- SALES MODE -->
+  <div id="sales-mode" style="display:none">
+    <div class="sales-inner">
+      <p class="sales-eyebrow">Partner With Us</p>
+      <h2 class="sales-heading">Reach UCLA's Most Engaged Readers</h2>
+      <p class="sales-sub">Three ways to build your presence on The Westwood Times — transparent pricing, no hidden fees.</p>
+      <div class="sales-grid">
+        <div class="sales-card">
+          <div class="sales-card-top">
+            <div class="sales-card-label">Content</div>
+            <div class="sales-card-name">Article Publishing</div>
+            <div class="sales-price-row"><span class="sales-price-dollar">$5</span><span class="sales-price-period">/ week</span></div>
+          </div>
+          <div class="sales-card-body">
+            <p class="sales-card-desc">Publish a sponsored article on the TWT homepage under your byline, with a permanent URL and full distribution.</p>
+            <ul class="sales-feature-list">
+              <li>Published on TWT homepage</li><li>Your byline &amp; voice</li>
+              <li>Permanent URL on thewestwoodtimes.com</li><li>Included in site search index</li>
+              <li>Labeled "Sponsored Content"</li>
+            </ul>
+            <a href="mailto:thewestwoodtimes@gmail.com?subject=Article Publishing Inquiry" class="sales-cta-btn">Get Started</a>
+          </div>
+        </div>
+        <div class="sales-card featured">
+          <div class="sales-card-top">
+            <div class="sales-card-label">Advertising</div>
+            <div class="sales-card-name">Display Advertising</div>
+            <div class="sales-price-row"><span class="sales-price-dollar">$20</span><span class="sales-price-period">/ week</span></div>
+          </div>
+          <div class="sales-card-body">
+            <p class="sales-card-desc">Place your banner in front of every visitor — homepage, article pages, or both. High-visibility, editorially-matched design.</p>
+            <ul class="sales-feature-list">
+              <li>Homepage banner (1200 &times; 200 px)</li><li>Article page mid-content placement</li>
+              <li>All-pages or targeted placement</li><li>Link directly to your site</li>
+              <li>Live within 24 hours of approval</li>
+            </ul>
+            <a href="mailto:thewestwoodtimes@gmail.com?subject=Display Advertising Inquiry" class="sales-cta-btn">Advertise Now</a>
+          </div>
+        </div>
+        <div class="sales-card">
+          <div class="sales-card-top">
+            <div class="sales-card-label">Contributor Access</div>
+            <div class="sales-card-name">The Press Room</div>
+            <div class="sales-price-row"><span class="sales-price-dollar">$20</span><span class="sales-price-period">one-time</span></div>
+          </div>
+          <div class="sales-card-body">
+            <p class="sales-card-desc">Your own private publishing environment. A dedicated contributor password so you can publish articles to TWT anytime.</p>
+            <ul class="sales-feature-list">
+              <li>Dedicated contributor login</li><li>Unlimited article submissions</li>
+              <li>Publish across all categories</li><li>Your byline on every piece</li>
+              <li>Editorial review available</li>
+            </ul>
+            <a href="mailto:thewestwoodtimes@gmail.com?subject=Press Room Access Inquiry" class="sales-cta-btn">Get Access</a>
+          </div>
+        </div>
+      </div>
+      <div class="sales-contact">
+        <h3>Custom packages available</h3>
+        <p>Running a campaign, an event, or a longer partnership? We'll put together a proposal tailored to your goals. We respond within one business day.</p>
+        <a href="mailto:thewestwoodtimes@gmail.com" class="sales-email-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          thewestwoodtimes@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <a href="index.html" aria-label="The Westwood Times home">
+          <img src="images/twt_logo_new.png" alt="The Westwood Times">
+        </a>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col"><h4>Campus</h4><ul>
+          <li><a href="#section-social">Social</a></li>
+          <li><a href="#section-clubs">Clubs</a></li>
+          <li><a href="#section-community">Community</a></li>
+          <li><a href="#section-hill">Hill</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Westwood</h4><ul>
+          <li><a href="#section-village">Village News</a></li>
+          <li><a href="#section-sports">Sports</a></li>
+          <li><a href="#opinion-heading">Opinion</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="sponsorships.html">Sponsorships</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="newsletter.html">Newsletters</a></li>
+          <li><a href="sponsorships.html">Advertise</a></li>
+          <li><a href="about.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul>
+          <li><a href="legal/parody.html">Legal Notice</a></li>
+          <li><a href="legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="legal/terms.html">Terms of Use</a></li>
+          <li><a href="legal/cookies.html">Cookie Settings</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Westwood Times — All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    (function(){
+      var el = document.getElementById('topbar-date');
+      if(el){ el.textContent = new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}); }
+    })();
+  </script>
+  <script src="js/featured.js"></script>
+  <script src="js/ads.js"></script>
+  <script src="js/ticker.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/search-data.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/custom-articles.js"></script>
+  <script>
+  (function () {
+    var modeTabs = document.querySelectorAll('.mode-tab');
+    var modes = {
+      articles: document.getElementById('articles-mode'),
+      reels:    document.getElementById('reels-mode'),
+      sales:    document.getElementById('sales-mode')
+    };
+    var reelsLoaded = false;
+
+    function loadReelsThen(cb) {
+      if (reelsLoaded) { cb(); return; }
+      reelsLoaded = true;
+      var s = document.createElement('script');
+      s.src = 'js/reels.js';
+      s.onload = cb;
+      document.body.appendChild(s);
+    }
+
+    var categoryTabs = document.querySelectorAll('.nav-tab[data-section]');
+
+    function switchMode(target) {
+      modeTabs.forEach(function (t) {
+        var active = t.getAttribute('data-mode') === target;
+        t.classList.toggle('active', active);
+        t.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      // Clear category tab highlights when not in articles mode
+      categoryTabs.forEach(function (a) {
+        if (target !== 'articles') a.classList.remove('active');
+      });
+      Object.keys(modes).forEach(function (k) {
+        modes[k].style.display = k === target ? '' : 'none';
+      });
+      if (window.hideReelsNav) window.hideReelsNav();
+      document.body.style.overflow = target === 'reels' ? 'hidden' : '';
+      var footer = document.getElementById('site-footer');
+      if (footer) footer.style.display = target === 'reels' ? 'none' : '';
+      if (target === 'reels') {
+        loadReelsThen(function () { if (window.initReels) window.initReels(); });
+      }
+    }
+
+    modeTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () { switchMode(this.getAttribute('data-mode')); });
+    });
+
+    // Clicking any section link while in reels/sales switches back to articles
+    document.querySelectorAll('.nav-tab[data-section]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        if (modes.articles.style.display === 'none') switchMode('articles');
+      });
+    });
+
+    // Deep-link support: ?mode=reels or ?mode=sales
+    var deepMode = new URLSearchParams(window.location.search).get('mode');
+    if (deepMode && modes[deepMode]) switchMode(deepMode);
+  })();
+  </script>
+
+</body>
+</html>

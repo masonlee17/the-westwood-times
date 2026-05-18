@@ -1,0 +1,213 @@
+[
+  {
+    "slug": "test-env-1",
+    "name": "test env 1",
+    "description": "",
+    "eyebrow": "this is the test",
+    "question": "Whats the number",
+    "password": "555",
+    "features": [
+      "blackout",
+      "awards",
+      "chores",
+      "board",
+      "polls",
+      "scores"
+    ],
+    "members": [
+      "M",
+      "R",
+      "C"
+    ],
+    "blackout": [
+      {
+        "name": "M",
+        "count": 1
+      },
+      {
+        "name": "R",
+        "count": 1
+      },
+      {
+        "name": "C",
+        "count": 0
+      }
+    ],
+    "awards": [
+      {
+        "icon": "🏆",
+        "label": "Dick",
+        "winner": "M",
+        "color": "gold"
+      }
+    ],
+    "chores": [
+      {
+        "id": "1775541717845",
+        "task": "Clean",
+        "assignee": "M",
+        "done": false,
+        "date": "Apr 6, 2026"
+      },
+      {
+        "id": "1775541724992",
+        "task": "Trash",
+        "assignee": "",
+        "done": false,
+        "date": "Apr 6, 2026"
+      }
+    ],
+    "board": [
+      {
+        "id": "1775541731684",
+        "author": "R",
+        "text": "hey",
+        "image": null,
+        "reactions": {
+          "❤️": 1,
+          "👍": 3,
+          "😂": 1
+        },
+        "date": "Apr 6, 2026"
+      },
+      {
+        "id": "1775541741850",
+        "author": "R",
+        "text": "no",
+        "image": null,
+        "reactions": {},
+        "date": "Apr 6, 2026"
+      }
+    ],
+    "polls": [
+      {
+        "id": "1775543124754",
+        "question": "hi",
+        "options": [
+          {
+            "text": "1",
+            "votes": [
+              {
+                "date": "2026-04-07T06:25:44.904Z"
+              }
+            ]
+          },
+          {
+            "text": "1",
+            "votes": [
+              {
+                "date": "2026-04-07T06:25:28.469Z"
+              }
+            ]
+          }
+        ],
+        "date": "Apr 6, 2026"
+      }
+    ],
+    "scores": [
+      {
+        "name": "M",
+        "score": 3
+      },
+      {
+        "name": "R",
+        "score": 0
+      },
+      {
+        "name": "C",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "slug": "retirement-home",
+    "name": "Retirement Home",
+    "description": "",
+    "eyebrow": "For Men Who Like To Play With Each Other",
+    "question": "What's the wifi password?",
+    "password": "TikiTiki!",
+    "features": [
+      "blackout",
+      "awards",
+      "board",
+      "polls"
+    ],
+    "members": [
+      "Alex Coleman",
+      "Alex Prater",
+      "Ryan Burack",
+      "Cayden Lehr",
+      "Caden Cabrera",
+      "Mason Lee"
+    ],
+    "blackout": [
+      {
+        "name": "Alex Coleman",
+        "count": 2
+      },
+      {
+        "name": "Alex Prater",
+        "count": 1
+      },
+      {
+        "name": "Ryan Burack",
+        "count": 0
+      },
+      {
+        "name": "Cayden Lehr",
+        "count": 0
+      },
+      {
+        "name": "Caden Cabrera",
+        "count": 0
+      },
+      {
+        "name": "Mason Lee",
+        "count": 0
+      }
+    ],
+    "awards": [
+      {
+        "icon": "🤡",
+        "label": "Bird of the Week",
+        "winner": "Alex Coleman",
+        "color": "red"
+      },
+      {
+        "icon": "🏆",
+        "label": "Drunk of the Week",
+        "winner": "Alex Coleman",
+        "color": "gold"
+      }
+    ],
+    "chores": [],
+    "board": [],
+    "polls": [],
+    "scores": [
+      {
+        "name": "Alex Coleman",
+        "score": 0
+      },
+      {
+        "name": "Alex Prater",
+        "score": 0
+      },
+      {
+        "name": "Ryan Burack",
+        "score": 0
+      },
+      {
+        "name": "Cayden Lehr",
+        "score": 0
+      },
+      {
+        "name": "Caden Cabrera",
+        "score": 0
+      },
+      {
+        "name": "Mason Lee",
+        "score": 0
+      }
+    ]
+  }
+]

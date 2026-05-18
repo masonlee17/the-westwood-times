@@ -1,0 +1,193 @@
+/* ── Hero ── */
+.hero-section {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0 0;
+}
+
+.hero-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1px 320px;
+  gap: 0 32px;
+  align-items: start;
+}
+
+.hero-divider-v {
+  background: var(--border);
+  height: 100%;
+  min-height: 280px;
+  align-self: stretch;
+}
+
+/* ── Primary story ── */
+.hero-primary {
+  display: block;
+  text-decoration: none;
+  padding-bottom: 28px;
+}
+
+.hero-primary:hover .hero-headline { color: var(--blue); }
+
+.hero-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.25s var(--ease);
+}
+.hero-primary:hover .hero-img { opacity: 0.94; }
+
+.hero-overlay { padding: 18px 0 0; }
+
+.hero-kicker {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.hero-headline {
+  color: var(--text);
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 800;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+  transition: color 0.18s var(--ease);
+}
+
+.hero-dek {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ── Secondary stack ── */
+.hero-secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-bottom: 28px;
+}
+
+.hero-secondary-card {
+  display: flex;
+  gap: 14px;
+  text-decoration: none;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-light);
+  align-items: flex-start;
+  transition: opacity 0.18s;
+}
+.hero-secondary-card:first-child { padding-top: 0; }
+.hero-secondary-card:last-child { border-bottom: none; }
+.hero-secondary-card:hover { opacity: 0.75; }
+
+.hero-secondary-card img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+.hero-secondary-card .card-body { flex: 1; }
+
+.hero-secondary-card .card-kicker {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.hero-secondary-card .card-headline {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  transition: color 0.15s;
+}
+
+/* ── Bottom strip ── */
+.hero-bottom {
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+  padding: 22px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.hero-bottom-card { display: block; text-decoration: none; overflow: hidden; }
+.hero-bottom-card:hover .card-headline { color: var(--blue); }
+
+.hero-bottom-card .img-wrap {
+  overflow: hidden;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hero-bottom-card img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s var(--ease);
+}
+.hero-bottom-card:hover img { transform: scale(1.04); }
+
+.hero-bottom-card .card-headline {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text);
+  transition: color 0.18s;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-divider-v { display: none; }
+  .hero-primary { padding-bottom: 20px; }
+  .hero-secondary {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .hero-secondary-card {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 200px;
+    border-bottom: none;
+    padding: 0;
+    flex-direction: column;
+  }
+  .hero-secondary-card img { width: 100%; height: auto; }
+  .hero-bottom { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .hero-section { padding-top: 20px; }
+  .hero-headline { font-size: 20px; }
+  .hero-dek { display: none; }
+  .hero-secondary { flex-direction: column; gap: 0; }
+  .hero-secondary-card {
+    flex-direction: row;
+    border-bottom: 1px solid var(--border-light);
+    padding: 14px 0;
+  }
+  .hero-secondary-card img { width: 80px; height: 54px; }
+  .hero-bottom { grid-template-columns: 1fr; }
+}
