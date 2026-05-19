@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: the-westwood-times
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /
+    envVars:
+      - key: MASTER_PW
+        sync: false
